@@ -3,3 +3,7 @@
 .playwright-mcp/
 *.log
 .firebase/
+
+# Generated commercial collateral (keep local, out of GitHub)
+/output/
+/tmp/
