@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
-  <title id="title">Ideias boas merecem sair do papel — Cortexis</title>
-  <desc id="desc">Arte de lançamento para Instagram, com fundo azul-marinho escuro, rede de linhas ciano e chamada central da Cortexis.</desc>
+  <title id="title">Ideias boas merecem sair do papel — Cortexistech</title>
+  <desc id="desc">Arte de lançamento para Instagram, com fundo azul-marinho escuro, rede de linhas ciano e chamada central da Cortexistech.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#080d12"/>
@@ -34,8 +34,8 @@
     <circle cx="927" cy="654" r="7"/><circle cx="850" cy="832" r="6"/>
   </g>
   <g font-family="Arial, Helvetica, sans-serif">
-    <text x="86" y="115" fill="#eef3f5" font-size="34" font-weight="700" letter-spacing="1">CORTEXIS</text>
-    <path d="M86 143h90" stroke="#58d9e7" stroke-width="3"/>
+    <text x="86" y="115" fill="#eef3f5" font-size="28" font-weight="700" letter-spacing="1">Cortexistech</text>
+    <path d="M86 143h168" stroke="#58d9e7" stroke-width="3"/>
     <text x="86" y="515" fill="#58d9e7" font-size="19" font-weight="700" letter-spacing="5">TECNOLOGIA SOB MEDIDA</text>
     <text x="82" y="666" fill="#eef3f5" font-size="102" font-weight="700" letter-spacing="-4">Ideias boas</text>
     <text x="82" y="786" fill="#eef3f5" font-size="102" font-weight="700" letter-spacing="-4">merecem sair</text>

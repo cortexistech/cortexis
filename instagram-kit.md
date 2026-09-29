@@ -1,12 +1,12 @@
-# Kit de lançamento do Instagram — Cortexis
+# Kit de lançamento do Instagram — Cortexistech
 
-Material pronto para abrir e começar a preencher o perfil da Cortexis. Os nomes de usuário são sugestões; confirme a disponibilidade no Instagram antes de escolher.
+Material pronto para abrir e começar a preencher o perfil da Cortexistech. Os nomes de usuário são sugestões; confirme a disponibilidade no Instagram antes de escolher.
 
 ## 1. Dados do perfil
 
-**Nome exibido:** Cortexis | Tecnologia sob medida  
-**Usuário sugerido (prioridade):** `@cortexis.tech`  
-**Alternativas:** `@cortexistech` · `@cortexis.digital`  
+**Nome exibido:** Cortexistech | Tecnologia sob medida  
+**Usuário sugerido (prioridade):** `@cortexistech`  
+**Alternativas:** `@cortexis.tech` · `@cortexistech.digital`  
 **Categoria:** Empresa de software (ou Desenvolvimento de software, se essa opção aparecer)  
 **Tipo de conta:** Profissional > Empresa  
 **Foto do perfil:** usar o símbolo da marca em [img/logo-icon.png](img/logo-icon.png). Se o recorte circular ficar apertado, usar [img/logo-lockup.png](img/logo-lockup.png) e manter o símbolo centralizado.
@@ -28,8 +28,8 @@ Material pronto para abrir e começar a preencher o perfil da Cortexis. Os nomes
 - Usar o logo original sem redesenhar ou distorcer. Preferir fundos sólidos e espaço livre ao redor do símbolo.
 - Para posts, criar arquivos em 1080 × 1350 px; para Stories e Reels, 1080 × 1920 px. Manter títulos e informações importantes longe das bordas.
 - Alternar entre capas tipográficas, detalhes de interfaces/projetos e imagens do processo. Evitar imagens genéricas de robôs e promessas grandiosas de IA.
-- Usar uma chamada por peça: “Conte sua ideia”, “Conheça o processo” ou “Fale com a Cortexis”.
-- Escrever “Cortexis” sempre da mesma forma e conferir legibilidade em tela pequena.
+- Usar uma chamada por peça: “Conte sua ideia”, “Conheça o processo” ou “Fale com a Cortexistech”.
+- Escrever “Cortexistech” sempre da mesma forma e conferir legibilidade em tela pequena.
 
 ## 3. Destaques dos Stories
 
@@ -49,11 +49,11 @@ Capas simples com o símbolo da marca e um título curto.
 **Arte/capa:** “Ideias boas merecem sair do papel.”  
 **Legenda:**
 
-> Somos a Cortexis, um estúdio de tecnologia que transforma desafios de negócio em produtos digitais. Criamos sites, aplicativos, MVPs e soluções com IA — com comunicação direta em todas as etapas.  
+> Somos a Cortexistech, um estúdio de tecnologia que transforma desafios de negócio em produtos digitais. Criamos sites, aplicativos, MVPs e soluções com IA — com comunicação direta em todas as etapas.  
 >  
 > Tem uma ideia ou precisa evoluir um produto? Conte pra gente pelo link da bio.  
 >  
-> #Cortexis #Tecnologia #ProdutosDigitais #Empreendedorismo
+> #Cortexistech #Tecnologia #ProdutosDigitais #Empreendedorismo
 
 ### Post 2 — O que fazemos
 
@@ -68,7 +68,7 @@ Capas simples com o símbolo da marca e um título curto.
 > • Agentes de IA  
 > • Manutenção e suporte  
 >  
-> Qual é o próximo passo do seu negócio? Fale com a Cortexis pelo link da bio.  
+> Qual é o próximo passo do seu negócio? Fale com a Cortexistech pelo link da bio.  
 >  
 > #DesenvolvimentoDeSoftware #Sites #Aplicativos #InteligenciaArtificial
 
@@ -83,7 +83,7 @@ Capas simples com o símbolo da marca e um título curto.
 >  
 > Quer entender como esse processo funcionaria para a sua ideia? Mande uma mensagem.  
 >  
-> #ProcessoCriativo #Desenvolvimento #ProdutoDigital #Cortexis
+> #ProcessoCriativo #Desenvolvimento #ProdutoDigital #Cortexistech
 
 ### Post 4 — Sites
 
@@ -94,7 +94,7 @@ Capas simples com o símbolo da marca e um título curto.
 >  
 > Está na hora de criar ou renovar o seu? Vamos conversar pelo link da bio.  
 >  
-> #CriaçãoDeSites #LandingPage #PresençaDigital #Cortexis
+> #CriaçãoDeSites #LandingPage #PresençaDigital #Cortexistech
 
 ### Post 5 — Apps
 
@@ -105,7 +105,7 @@ Capas simples com o símbolo da marca e um título curto.
 >  
 > Tem um projeto em mente? Conte pra gente.  
 >  
-> #Aplicativos #DesenvolvimentoMobile #ProdutoDigital #Cortexis
+> #Aplicativos #DesenvolvimentoMobile #ProdutoDigital #Cortexistech
 
 ### Post 6 — MVPs
 
@@ -116,7 +116,7 @@ Capas simples com o símbolo da marca e um título curto.
 >  
 > Quer tirar seu produto do papel? Vamos conversar sobre o primeiro passo.  
 >  
-> #MVP #Startups #Inovação #Empreendedorismo #Cortexis
+> #MVP #Startups #Inovação #Empreendedorismo #Cortexistech
 
 ### Post 7 — Agentes de IA
 
@@ -125,9 +125,9 @@ Capas simples com o símbolo da marca e um título curto.
 
 > Agentes conversacionais podem apoiar atendimento, treinamento e simulações. O ponto de partida é sempre o contexto: qual tarefa precisa melhorar e como saberemos se a solução ajudou?  
 >  
-> Na Cortexis, desenhamos soluções de IA para necessidades concretas. Fale com a gente sobre o seu caso.  
+> Na Cortexistech, desenhamos soluções de IA para necessidades concretas. Fale com a gente sobre o seu caso.  
 >  
-> #InteligenciaArtificial #AgentesDeIA #Automação #Cortexis
+> #InteligenciaArtificial #AgentesDeIA #Automação #Cortexistech
 
 ### Post 8 — Forma de trabalhar
 
@@ -136,9 +136,9 @@ Capas simples com o símbolo da marca e um título curto.
 
 > Acreditamos em comunicação direta, código bem cuidado e decisões explicadas com clareza. Você acompanha o andamento e sabe o que vem a seguir — do primeiro rascunho à publicação.  
 >  
-> É assim que trabalhamos na Cortexis.  
+> É assim que trabalhamos na Cortexistech.  
 >  
-> #DesenvolvimentoDeSoftware #Tecnologia #Cortexis
+> #DesenvolvimentoDeSoftware #Tecnologia #Cortexistech
 
 ### Post 9 — Convite
 
@@ -149,14 +149,14 @@ Capas simples com o símbolo da marca e um título curto.
 >  
 > Acesse o link da bio ou escreva para cortexistech@gmail.com.  
 >  
-> #VamosConversar #ProjetosDigitais #Cortexis
+> #VamosConversar #ProjetosDigitais #Cortexistech
 
 ## 5. Stories de lançamento
 
 Publique em sequência e salve nos destaques correspondentes.
 
 **Story 1 — Chegamos**  
-“A Cortexis agora também está por aqui. Bem-vindo ao nosso espaço de ideias, tecnologia e produtos digitais.”
+“A Cortexistech agora também está por aqui. Bem-vindo ao nosso espaço de ideias, tecnologia e produtos digitais.”
 
 **Story 2 — O que fazemos**  
 “Sites, aplicativos, MVPs, agentes de IA e suporte. Tecnologia pensada para resolver problemas reais.”
@@ -170,7 +170,7 @@ Opções: “Um site” / “Um app”
 Publicar depois uma caixa: “Conta pra gente: qual desafio digital está no seu radar?”
 
 **Story 5 — Chamada**  
-“Tem uma ideia ou quer melhorar um produto? Toque no link da bio e fale com a Cortexis.”
+“Tem uma ideia ou quer melhorar um produto? Toque no link da bio e fale com a Cortexistech.”
 
 ## 6. Calendário sugerido para as primeiras três semanas
 
@@ -191,12 +191,12 @@ Ritmo inicial sugerido: três posts por semana e Stories nos dias de publicaçã
 - Publicar os três primeiros posts antes de divulgar o perfil para que a página já tenha contexto.
 - Revisar links, ortografia e informações de contato em cada peça.
 - Pedir autorização antes de publicar nomes, imagens, telas ou resultados de clientes.
-- Não anunciar números, resultados, prazos ou recursos específicos sem confirmação da Cortexis.
+- Não anunciar números, resultados, prazos ou recursos específicos sem confirmação da Cortexistech.
 
 ## 8. Respostas rápidas para mensagens
 
 **Primeiro contato**  
-“Olá! Obrigado por chamar a Cortexis. Pode contar um pouco sobre o seu negócio e o que você gostaria de criar ou melhorar?”
+“Olá! Obrigado por chamar a Cortexistech. Pode contar um pouco sobre o seu negócio e o que você gostaria de criar ou melhorar?”
 
 **Pedido de orçamento**  
 “Vamos entender o escopo antes de estimar. Se puder, envie o objetivo do projeto, quem vai usar, funcionalidades essenciais e prazo desejado. Respondemos pelo e-mail cortexistech@gmail.com.”

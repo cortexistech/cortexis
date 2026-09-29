@@ -1,5 +1,5 @@
 /* ============================================================
-   Cortexis — tokens
+   Cortexistech — tokens
    ============================================================ */
 :root {
   --void: #080d12;
@@ -457,8 +457,8 @@ svg {
   color: var(--ink);
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 18px;
-  letter-spacing: 0.015em;
+  font-size: 16px;
+  letter-spacing: 0.02em;
 }
 .brand-mark {
   flex-shrink: 0;

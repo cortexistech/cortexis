@@ -62,8 +62,8 @@
     institVideo.setAttribute(
       "title",
       locale === "pt-PT"
-        ? "Vídeo institucional da Cortexis (português de Portugal)"
-        : "Vídeo institucional da Cortexis (português do Brasil)"
+        ? "Vídeo institucional da Cortexistech (português de Portugal)"
+        : "Vídeo institucional da Cortexistech (português do Brasil)"
     );
     institVideo.load();
   }
