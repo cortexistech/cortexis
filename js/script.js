@@ -1,9 +1,89 @@
 (() => {
   "use strict";
 
+  const HASH_PAGES = {
+    video: "apresentacao.html",
+    servicos: "servicos.html",
+    processo: "processo.html",
+    sobre: "sobre.html",
+    contato: "contato.html",
+  };
+  const pageFile = (location.pathname.split("/").pop() || "index.html");
+  if (pageFile === "" || pageFile === "index.html") {
+    const dest = HASH_PAGES[location.hash.replace(/^#/, "")];
+    if (dest) {
+      location.replace(dest);
+      return;
+    }
+  }
+
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const heroVideo = document.querySelector(".hero-film video");
   if (heroVideo && !reduceMotion) heroVideo.play().catch(() => {});
+
+  const institVideo = document.querySelector(".institucional-player video");
+  if (institVideo && heroVideo) {
+    institVideo.addEventListener("play", () => heroVideo.pause());
+    institVideo.addEventListener("pause", () => {
+      if (!reduceMotion) heroVideo.play().catch(() => {});
+    });
+  }
+
+  const INSTIT_SRC = {
+    "pt-BR": "assets/cortexis-institucional.mp4",
+    "pt-PT": "assets/cortexis-institucional-pt-pt.mp4",
+  };
+
+  function detectPortugueseLocale() {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    const langs = Array.from(navigator.languages || [navigator.language || ""]);
+    if (/^(Europe\/Lisbon|Atlantic\/Madeira|Atlantic\/Azores)$/i.test(tz)) return "pt-PT";
+    if (
+      /^(America\/(Sao_Paulo|Manaus|Fortaleza|Recife|Bahia|Belem|Cuiaba|Campo_Grande|Porto_Velho|Boa_Vista|Rio_Branco|Noronha|Araguaina|Maceio|Santarem)|America\/Sao_Paulo)/i.test(
+        tz
+      )
+    ) {
+      return "pt-BR";
+    }
+    if (langs.some((code) => /^pt-PT/i.test(code))) return "pt-PT";
+    if (langs.some((code) => /^pt-BR/i.test(code))) return "pt-BR";
+    return "pt-BR";
+  }
+
+  function applyInstitucionalLocale(locale) {
+    if (!institVideo) return;
+    const next = INSTIT_SRC[locale] || INSTIT_SRC["pt-BR"];
+    const source = institVideo.querySelector("source");
+    const current = (source && source.getAttribute("src")) || "";
+    if (current === next && institVideo.getAttribute("data-locale") === locale) return;
+    if (!institVideo.paused && institVideo.currentTime > 0.4) return;
+    if (source) source.setAttribute("src", next);
+    institVideo.setAttribute("data-locale", locale);
+    institVideo.setAttribute(
+      "title",
+      locale === "pt-PT"
+        ? "Vídeo institucional da Cortexis (português de Portugal)"
+        : "Vídeo institucional da Cortexis (português do Brasil)"
+    );
+    institVideo.load();
+  }
+
+  const localeParam = new URLSearchParams(location.search).get("lang") || new URLSearchParams(location.search).get("locale");
+  let lockedLocale = null;
+  if (localeParam === "pt-PT" || localeParam === "pt") lockedLocale = "pt-PT";
+  if (localeParam === "pt-BR" || localeParam === "br") lockedLocale = "pt-BR";
+  applyInstitucionalLocale(lockedLocale || detectPortugueseLocale());
+  if (!lockedLocale) {
+    fetch("https://api.country.is/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data || !data.country) return;
+        if (!institVideo || !institVideo.paused || institVideo.currentTime > 0.4) return;
+        if (data.country === "PT") applyInstitucionalLocale("pt-PT");
+        else if (data.country === "BR") applyInstitucionalLocale("pt-BR");
+      })
+      .catch(() => {});
+  }
 
   /* ---------------------------------------------------------
      Mobile nav toggle
@@ -27,25 +107,34 @@
      Scroll reveal + process path progress
      --------------------------------------------------------- */
   const revealTargets = document.querySelectorAll(
-    ".card, .process-path, .about-text, .about-graphic, .contact-intro, .contact-form"
+    ".card, .process-path, .about-text, .about-graphic, .contact-intro, .contact-form, .institucional-player"
   );
   revealTargets.forEach((el) => el.classList.add("reveal"));
+
+  const markInView = (el) => el.classList.add("in-view");
+  const alreadyVisible = (el) => {
+    const rect = el.getBoundingClientRect();
+    return rect.bottom > 0 && rect.top < window.innerHeight - 32;
+  };
 
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
+            markInView(entry.target);
             io.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
-    revealTargets.forEach((el) => io.observe(el));
+    revealTargets.forEach((el) => {
+      if (alreadyVisible(el)) markInView(el);
+      else io.observe(el);
+    });
   } else {
-    revealTargets.forEach((el) => el.classList.add("in-view"));
+    revealTargets.forEach(markInView);
   }
 
   /* ---------------------------------------------------------
