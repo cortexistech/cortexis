@@ -33,6 +33,15 @@
     "pt-BR": "assets/cortexis-institucional.mp4",
     "pt-PT": "assets/cortexis-institucional-pt-pt.mp4",
   };
+  const TECHDOCS_SRC = {
+    "pt-BR": "assets/techdocs-comercial.mp4?v=fala",
+    "pt-PT": "assets/techdocs-comercial-pt-pt.mp4?v=pt",
+  };
+  const TECHDOCS_POSTER = {
+    "pt-BR": "assets/techdocs-comercial-poster.jpg?v=telas",
+    "pt-PT": "assets/techdocs-comercial-pt-pt-poster.jpg?v=pt",
+  };
+  const techdocsVideo = document.querySelector("video[data-film='techdocs']");
 
   function detectPortugueseLocale() {
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
@@ -52,9 +61,12 @@
 
   function applyInstitucionalLocale(locale) {
     if (!institVideo) return;
-    const next = INSTIT_SRC[locale] || INSTIT_SRC["pt-BR"];
     const source = institVideo.querySelector("source");
     const current = (source && source.getAttribute("src")) || "";
+    // Só o filme institucional troca de faixa. Outros vídeos do site
+    // (por exemplo o do TechDocs) ficam com o arquivo que a página indicou.
+    if (!current.includes("cortexis-institucional")) return;
+    const next = INSTIT_SRC[locale] || INSTIT_SRC["pt-BR"];
     if (current === next && institVideo.getAttribute("data-locale") === locale) return;
     if (!institVideo.paused && institVideo.currentTime > 0.4) return;
     if (source) source.setAttribute("src", next);
@@ -68,19 +80,44 @@
     institVideo.load();
   }
 
+  function applyTechdocsLocale(locale) {
+    if (!techdocsVideo) return;
+    const next = TECHDOCS_SRC[locale] || TECHDOCS_SRC["pt-BR"];
+    const source = techdocsVideo.querySelector("source");
+    const current = (source && source.getAttribute("src")) || "";
+    if (current === next && techdocsVideo.getAttribute("data-locale") === locale) return;
+    if (!techdocsVideo.paused && techdocsVideo.currentTime > 0.4) return;
+    if (source) source.setAttribute("src", next);
+    techdocsVideo.setAttribute("data-locale", locale);
+    techdocsVideo.poster = TECHDOCS_POSTER[locale] || TECHDOCS_POSTER["pt-BR"];
+    techdocsVideo.setAttribute(
+      "title",
+      locale === "pt-PT"
+        ? "Filme do TechDocs (português de Portugal)"
+        : "Filme do TechDocs (português do Brasil)"
+    );
+    techdocsVideo.load();
+  }
+
   const localeParam = new URLSearchParams(location.search).get("lang") || new URLSearchParams(location.search).get("locale");
   let lockedLocale = null;
   if (localeParam === "pt-PT" || localeParam === "pt") lockedLocale = "pt-PT";
   if (localeParam === "pt-BR" || localeParam === "br") lockedLocale = "pt-BR";
-  applyInstitucionalLocale(lockedLocale || detectPortugueseLocale());
+  const initialLocale = lockedLocale || detectPortugueseLocale();
+  applyInstitucionalLocale(initialLocale);
+  applyTechdocsLocale(initialLocale);
   if (!lockedLocale) {
     fetch("https://api.country.is/")
       .then((res) => res.json())
       .then((data) => {
         if (!data || !data.country) return;
-        if (!institVideo || !institVideo.paused || institVideo.currentTime > 0.4) return;
-        if (data.country === "PT") applyInstitucionalLocale("pt-PT");
-        else if (data.country === "BR") applyInstitucionalLocale("pt-BR");
+        if (data.country === "PT") {
+          applyInstitucionalLocale("pt-PT");
+          applyTechdocsLocale("pt-PT");
+        } else if (data.country === "BR") {
+          applyInstitucionalLocale("pt-BR");
+          applyTechdocsLocale("pt-BR");
+        }
       })
       .catch(() => {});
   }
