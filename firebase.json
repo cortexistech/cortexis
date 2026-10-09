@@ -6,9 +6,7 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "README.md",
-      "instagram-agent/**",
-      "assets/render-instagram-site-refresh.mjs"
+      "README.md"
     ]
   }
 }
