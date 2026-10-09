@@ -4,7 +4,7 @@ import { createHmac, randomBytes, scryptSync, timingSafeEqual } from 'node:crypt
 import { extname } from 'node:path';
 import { db, MEDIA_DIR } from './db.js';
 import { writeCaption } from './llm.js';
-import { publish } from './instagram.js';
+import { publish, publishFacebook } from './instagram.js';
 
 const { ADMIN_EMAIL, ADMIN_PASSWORD_HASH, SESSION_SECRET, PUBLIC_BASE_URL } = process.env;
 if (!ADMIN_EMAIL || !ADMIN_PASSWORD_HASH || !SESSION_SECRET) {
@@ -80,8 +80,8 @@ app.post('/api/posts', upload.single('file'), async (req, res) => {
   } catch (e) {
     caption = '';
   }
-  const r = db.prepare('INSERT INTO posts (kind, media, instruction, caption, llm) VALUES (?,?,?,?,?)')
-    .run(kind, req.file.filename, instruction, caption, llm);
+  const r = db.prepare('INSERT INTO posts (kind, media, instruction, caption, llm, facebook) VALUES (?,?,?,?,?,?)')
+    .run(kind, req.file.filename, instruction, caption, llm, req.body.facebook === 'on' && !kind.startsWith('story') ? 1 : 0);
   res.json({ id: Number(r.lastInsertRowid) });
 });
 
@@ -107,6 +107,14 @@ async function run(p) {
   try {
     const igId = await publish({ kind: p.kind, url: `${PUBLIC_BASE_URL}/media/${p.media}`, caption: p.caption });
     db.prepare("UPDATE posts SET status='published', ig_id=? WHERE id=?").run(igId, p.id);
+    if (p.facebook) {
+      try {
+        const fbId = await publishFacebook({ kind: p.kind, url: `${PUBLIC_BASE_URL}/media/${p.media}`, caption: p.caption });
+        db.prepare('UPDATE posts SET fb_id=?, fb_error=NULL WHERE id=?').run(fbId, p.id);
+      } catch (e) {
+        db.prepare('UPDATE posts SET fb_error=? WHERE id=?').run(e.message, p.id);
+      }
+    }
   } catch (e) {
     db.prepare("UPDATE posts SET status='failed', error=? WHERE id=?").run(e.message, p.id);
   }

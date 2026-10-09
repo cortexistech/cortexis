@@ -19,3 +19,7 @@ db.exec(`CREATE TABLE IF NOT EXISTS posts (
   error TEXT,
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 )`);
+
+for (const col of ['facebook INTEGER NOT NULL DEFAULT 0', 'fb_id TEXT', 'fb_error TEXT']) {
+  try { db.exec(`ALTER TABLE posts ADD COLUMN ${col}`); } catch { /* já existe */ }
+}

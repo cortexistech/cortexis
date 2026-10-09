@@ -12,6 +12,8 @@ async function load() {
     return `<div class="p" data-id="${p.id}">${media}<div>
       <div class="t">${p.kind} · ${labels[p.status]}${p.llm ? ' · ' + p.llm : ''}${p.scheduled_at ? ' · ' + new Date(p.scheduled_at).toLocaleString() : ''}</div>
       <textarea ${open ? '' : 'disabled'}>${esc(p.caption)}</textarea>
+      ${p.facebook ? `<div class="t">Facebook: ${p.fb_id ? 'publicado' : p.fb_error ? 'falhou' : 'pendente'}</div>` : ''}
+      ${p.fb_error ? `<div class="t" style="color:#b00">${esc(p.fb_error)}</div>` : ''}
       ${p.error ? `<div class="t" style="color:#b00">${esc(p.error)}</div>` : ''}
       ${open ? `<div class="row"><input type="datetime-local" class="when"><button data-a="approve">Aprovar</button><button class="s" data-a="regen">Refazer legenda</button><button class="s" data-a="del">Apagar</button></div>` : ''}
     </div></div>`;

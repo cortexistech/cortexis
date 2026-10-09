@@ -34,3 +34,14 @@ export async function publish({ kind, url, caption }) {
   const { id: media } = await call(`${id}/media_publish`, { creation_id: container });
   return media;
 }
+
+// Publicação no feed da Página do Facebook (Stories não são suportados aqui).
+export async function publishFacebook({ kind, url, caption }) {
+  const page = process.env.FB_PAGE_ID;
+  if (!page) throw new Error('FB_PAGE_ID não configurado');
+  const isVideo = kind === 'reel';
+  if (!isVideo && kind !== 'image') throw new Error('Stories não são publicados no Facebook');
+  const { id, post_id } = await call(`${page}/${isVideo ? 'videos' : 'photos'}`,
+    isVideo ? { file_url: url, description: caption } : { url, caption });
+  return post_id || id;
+}
