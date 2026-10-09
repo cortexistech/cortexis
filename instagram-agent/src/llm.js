@@ -32,12 +32,29 @@ async function anthropic(prompt) {
   return (await r.json()).content[0].text.trim();
 }
 
+async function gemini(prompt) {
+  const model = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+  const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY },
+    body: JSON.stringify({
+      systemInstruction: { parts: [{ text: SYSTEM }] },
+      contents: [{ role: 'user', parts: [{ text: prompt }] }]
+    })
+  });
+  if (!r.ok) throw new Error(`Gemini ${r.status}`);
+  const text = (await r.json()).candidates?.[0]?.content?.parts?.map((p) => p.text).join('').trim();
+  if (!text) throw new Error('Gemini sem resposta');
+  return text;
+}
+
 let turn = 0;
 // Alterna entre os provedores configurados e usa o outro se um falhar.
 export async function writeCaption(prompt) {
   const providers = [];
   if (process.env.OPENAI_API_KEY) providers.push(['openai', openai]);
   if (process.env.ANTHROPIC_API_KEY) providers.push(['anthropic', anthropic]);
+  if (process.env.GEMINI_API_KEY) providers.push(['gemini', gemini]);
   if (!providers.length) throw new Error('Nenhuma chave de LLM configurada');
   const start = turn++ % providers.length;
   let lastError;
