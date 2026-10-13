@@ -7,6 +7,18 @@
       "**/.*",
       "**/node_modules/**",
       "README.md"
+    ],
+    "redirects": [
+      {
+        "source": "/techdocs.html",
+        "destination": "/cortexis-ops.html",
+        "type": 301
+      },
+      {
+        "source": "/techdocs",
+        "destination": "/cortexis-ops.html",
+        "type": 301
+      }
     ]
   }
 }
