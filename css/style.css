@@ -1185,6 +1185,17 @@ main > .contact:first-child {
 }
 .brand-footer {
   display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  text-decoration: none;
+}
+.brand-tagline {
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 .brand-footer .brand-logo {
   display: block;
