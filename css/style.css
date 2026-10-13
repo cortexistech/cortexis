@@ -1910,16 +1910,31 @@ body:has(.hero-film) .hero-inner {
   color: #a4afb5;
 }
 .showcase-image {
+  position: relative;
   overflow: hidden;
   aspect-ratio: 1.45;
   background: #eef1f3;
 }
 .showcase-image img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: transform 0.5s ease;
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.9s ease;
+}
+.showcase-image img.is-active {
+  opacity: 1;
+}
+.showcase-text,
+.showcase-index {
+  transition: opacity 0.35s ease;
+}
+.showcase-text.is-swapping,
+.showcase-index.is-swapping {
+  opacity: 0;
 }
 .executive-showcase:hover .showcase-image img {
   transform: scale(1.025);
@@ -2870,73 +2885,8 @@ body:has(.hero-film) .hero-inner {
 }
 
 /* ============================================================
-   Produtos próprios (home) e Finanças Fácil
+   Finanças Fácil
    ============================================================ */
-.home-products {
-  padding: 96px 0;
-  border-top: 1px solid #edf0f2;
-  background: #fff;
-}
-.home-products-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-.home-product {
-  display: flex;
-  flex-direction: column;
-  padding: 16px 16px 22px;
-  border: 1px solid rgba(18, 36, 51, 0.1);
-  background: #fff;
-  color: inherit;
-  text-decoration: none;
-  box-shadow: 0 32px 72px -56px rgba(18, 43, 58, 0.42);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.home-product:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 36px 74px -44px rgba(18, 43, 58, 0.5);
-}
-.home-product-image {
-  overflow: hidden;
-  aspect-ratio: 2.05;
-  margin-bottom: 18px;
-  background: #eef1f3;
-}
-.home-product-image img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  transition: transform 0.5s ease;
-}
-.home-product:hover .home-product-image img {
-  transform: scale(1.025);
-}
-.home-product-caption {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-}
-.home-product-caption .home-work-tag {
-  padding: 0;
-}
-.home-product h3 {
-  margin: 6px 0 8px;
-  color: var(--home-ink);
-  font-size: 24px;
-  letter-spacing: -0.04em;
-}
-.home-product p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
-}
-.home-product .showcase-arrow {
-  flex: none;
-}
 .ff-badge {
   display: inline-flex;
   align-items: center;
@@ -2981,19 +2931,7 @@ body:has(.hero-film) .hero-inner {
   }
 }
 @media (max-width: 720px) {
-  .home-products {
-    padding: 64px 0;
-  }
-  .home-products-grid {
-    grid-template-columns: 1fr;
-  }
   .ff-gallery {
     gap: 12px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .home-product,
-  .home-product-image img {
-    transition: none;
   }
 }

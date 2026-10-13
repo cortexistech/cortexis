@@ -21,6 +21,44 @@
   const heroVideo = document.querySelector(".hero-film video");
   if (heroVideo && !reduceMotion) heroVideo.play().catch(() => {});
 
+  // Card do hero: alterna os projetos selecionados como um anúncio.
+  const showcase = document.querySelector("[data-showcase]");
+  const slides = showcase ? Array.from(showcase.querySelectorAll(".showcase-image img")) : [];
+  if (slides.length > 1 && !reduceMotion) {
+    const text = showcase.querySelector(".showcase-text");
+    const category = text.querySelector(".showcase-category");
+    const title = text.querySelector("h2");
+    const kind = showcase.querySelector(".showcase-index");
+    let current = 0;
+    let paused = false;
+
+    const show = (index) => {
+      const next = slides[index];
+      slides[current].classList.remove("is-active");
+      next.classList.add("is-active");
+      showcase.href = next.dataset.href;
+      showcase.setAttribute("aria-label", `Conheça o ${next.dataset.title}, projeto desenvolvido pela Cortexis Tech`);
+      if (title.textContent !== next.dataset.title) {
+        text.classList.add("is-swapping");
+        kind.classList.add("is-swapping");
+        setTimeout(() => {
+          category.textContent = next.dataset.category;
+          title.textContent = next.dataset.title;
+          kind.textContent = next.dataset.kind;
+          text.classList.remove("is-swapping");
+          kind.classList.remove("is-swapping");
+        }, 350);
+      }
+      current = index;
+    };
+
+    ["mouseenter", "focusin"].forEach((e) => showcase.addEventListener(e, () => { paused = true; }));
+    ["mouseleave", "focusout"].forEach((e) => showcase.addEventListener(e, () => { paused = false; }));
+    setInterval(() => {
+      if (!paused && !document.hidden) show((current + 1) % slides.length);
+    }, 4500);
+  }
+
   const institVideo = document.querySelector(".institucional-player video");
   if (institVideo && heroVideo) {
     institVideo.addEventListener("play", () => heroVideo.pause());

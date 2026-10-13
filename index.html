@@ -55,7 +55,7 @@
   <section class="executive-hero">
     <div class="wrap executive-hero-inner">
       <div class="executive-copy">
-        <p class="executive-kicker"><span></span>Estúdio de tecnologia · Portugal &amp; Brasil</p>
+        <p class="executive-kicker"><span></span>Estúdio de tecnologia</p>
         <h1>Tecnologia bem pensada.<br><span>Negócios em movimento.</span></h1>
         <p class="executive-lead">Desenhamos e construímos produtos digitais que resolvem problemas reais — da primeira ideia à evolução contínua.</p>
         <div class="executive-actions">
@@ -64,16 +64,19 @@
         </div>
       </div>
 
-      <a class="executive-showcase" href="cortexis-ops.html" aria-label="Conheça o Cortexis Ops, produto desenvolvido pela Cortexis Tech">
+      <a class="executive-showcase" href="cortexis-ops.html" aria-label="Conheça o Cortexis Ops, produto desenvolvido pela Cortexis Tech" data-showcase>
         <div class="showcase-heading">
           <span>Projeto selecionado</span>
           <span class="showcase-index">Produto próprio</span>
         </div>
         <div class="showcase-image">
-          <img src="img/ops/techdocs.webp" alt="Tela de vencimentos do Cortexis Ops com a lista de documentos e a situação de cada prazo">
+          <img class="is-active" src="img/ops/techdocs.webp" alt="Tela de vencimentos do Cortexis Ops com a lista de documentos e a situação de cada prazo" data-href="cortexis-ops.html" data-category="TechDocs · TechArquivo" data-title="Cortexis Ops" data-kind="Produto próprio">
+          <img src="img/financas/anuncio-1.webp" alt="Finanças Fácil: seu dinheiro com clareza executiva, 100% offline, criptografado e sem anúncios" data-href="financas-facil.html" data-category="App Android · Finanças pessoais" data-title="Finanças Fácil" data-kind="Produto próprio">
+          <img src="img/financas/anuncio-2.webp" alt="Finanças Fácil: previsão do saldo e fatura do cartão no celular" data-href="financas-facil.html" data-category="App Android · Finanças pessoais" data-title="Finanças Fácil" data-kind="Produto próprio">
+          <img src="img/portfolio/medsim.jpg" alt="Simulação de anamnese no MED-SIM, com o paciente virtual movido a IA respondendo perguntas" data-href="agentes-ia.html" data-category="Simulador clínico · Educação" data-title="MED-SIM" data-kind="Agente de IA">
         </div>
         <div class="showcase-caption">
-          <div>
+          <div class="showcase-text">
             <span class="showcase-category">TechDocs · TechArquivo</span>
             <h2>Cortexis Ops</h2>
           </div>
@@ -83,43 +86,6 @@
       </a>
     </div>
     <div class="hero-bottomline" aria-hidden="true"><span></span></div>
-  </section>
-
-  <section class="home-products" aria-labelledby="home-products-title">
-    <div class="wrap">
-      <div class="home-section-head">
-        <p class="home-section-label">Produtos próprios</p>
-        <h2 id="home-products-title">Criados e mantidos pela Cortexis Tech.</h2>
-      </div>
-      <div class="home-products-grid">
-        <a class="home-product" href="cortexis-ops.html">
-          <div class="home-product-image">
-            <img src="img/ops/techdocs.webp" alt="Tela de vencimentos do Cortexis Ops com a lista de documentos e a situação de cada prazo" loading="lazy">
-          </div>
-          <div class="home-product-caption">
-            <div>
-              <span class="home-work-tag">SaaS para empresas · TechDocs · TechArquivo</span>
-              <h3>Cortexis Ops</h3>
-              <p>Documentos, vencimentos e arquivo físico da empresa num só sistema, com auditoria e backups diários.</p>
-            </div>
-            <span class="showcase-arrow" aria-hidden="true">↗</span>
-          </div>
-        </a>
-        <a class="home-product" href="financas-facil.html">
-          <div class="home-product-image">
-            <img src="img/financas/destaque.webp" alt="Finanças Fácil: seu dinheiro com clareza executiva, 100% offline e criptografado" loading="lazy">
-          </div>
-          <div class="home-product-caption">
-            <div>
-              <span class="home-work-tag">App Android · Finanças pessoais</span>
-              <h3>Finanças Fácil</h3>
-              <p>Patrimônio, cartões, previsão de caixa, metas e orçamentos, 100% offline e criptografado no celular.</p>
-            </div>
-            <span class="showcase-arrow" aria-hidden="true">↗</span>
-          </div>
-        </a>
-      </div>
-    </div>
   </section>
 
   <section class="home-explore" aria-label="Explore a Cortexis Tech">
@@ -181,13 +147,13 @@
       <div class="home-work-grid">
         <a class="home-work-card" href="https://www.grupoednave.com.br" target="_blank" rel="noopener">
           <div class="home-work-image"><img src="img/portfolio/grupo-ednave.jpg" alt="Página inicial do site da Grupo Ednave" loading="lazy"></div>
-          <span class="home-work-tag">Site institucional · Brasil</span>
+          <span class="home-work-tag">Site institucional · Transporte</span>
           <h3>Grupo Ednave</h3>
           <p>Transporte fluvial de petróleo e biocombustíveis na Amazônia.</p>
         </a>
         <a class="home-work-card" href="https://www.pilarsingular.pt" target="_blank" rel="noopener">
           <div class="home-work-image"><img src="img/portfolio/pilar-singular.jpg" alt="Página inicial do site da Pilar Singular" loading="lazy"></div>
-          <span class="home-work-tag">Site institucional · Portugal</span>
+          <span class="home-work-tag">Site institucional · Imobiliário</span>
           <h3>Pilar Singular</h3>
           <p>Investimento imobiliário, alojamento local e consultoria.</p>
         </a>
@@ -210,7 +176,7 @@
   <section class="home-facts" aria-label="A Cortexis Tech em números">
     <div class="wrap home-facts-grid">
       <div class="home-fact"><strong>9</strong><span>projetos no portfólio, de sites a agentes de IA</span></div>
-      <div class="home-fact"><strong>2</strong><span>países com clientes atendidos: Brasil e Portugal</span></div>
+      <div class="home-fact"><strong>2</strong><span>produtos próprios: Cortexis Ops e Finanças Fácil</span></div>
       <div class="home-fact"><strong>5</strong><span>frentes de serviço, da ideia à manutenção</span></div>
       <div class="home-fact"><strong>1</strong><span>conversa direta com quem constrói o projeto</span></div>
     </div>
@@ -236,7 +202,7 @@
           <img class="brand-logo" src="img/brand/logo-horizontal-dark.svg" alt="Cortexis Tech" width="186" height="50">
         </a>
         <p class="brand-tagline">Tecnologia bem pensada.</p>
-        <p class="footer-about">Estúdio de tecnologia entre Portugal e Brasil. Sites, aplicativos, produtos e agentes de IA, da primeira ideia à evolução contínua.</p>
+        <p class="footer-about">Estúdio de tecnologia. Sites, aplicativos, produtos e agentes de IA, da primeira ideia à evolução contínua.</p>
       </div>
       <nav class="footer-col" aria-label="Estúdio">
         <p class="footer-col-title">Estúdio</p>
@@ -263,12 +229,12 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cortexis Tech · Portugal &amp; Brasil</p>
+      <p>© 2026 Cortexis Tech</p>
       <a href="#top" class="footer-top">Voltar ao topo <span aria-hidden="true">↑</span></a>
     </div>
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=medsim"></script>
 </body>
 </html>
