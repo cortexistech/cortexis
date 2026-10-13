@@ -1172,55 +1172,130 @@ main > .contact:first-child {
    Footer
    ============================================================ */
 .site-footer {
-  border-top: 1px solid var(--line);
-  padding: 40px 0;
-  background: #fff;
+  padding: 72px 0 0;
+  background: #0b1a26;
+  color: #c3ced5;
 }
-.footer-inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1.2fr 1.4fr;
+  gap: 40px;
+  padding-bottom: 56px;
 }
 .brand-footer {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  text-decoration: none;
-}
-.brand-tagline {
-  color: var(--muted);
-  font-family: var(--font-display);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  display: inline-block;
 }
 .brand-footer .brand-logo {
   display: block;
   width: auto;
-  height: 46px;
+  height: 50px;
 }
-.footer-nav {
+.site-footer .brand-tagline {
+  margin: 14px 0 0;
+  color: #4fd3e2;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.site-footer .footer-about {
+  max-width: 34ch;
+  margin: 10px 0 0;
+  color: #8fa0aa;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.site-footer .footer-col-title {
+  margin: 4px 0 6px;
+  color: #fff;
+  font: 600 11px var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.footer-col a {
+  color: #c3ced5;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-col a:hover {
+  color: #4fd3e2;
+}
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-contact svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: #4fd3e2;
+}
+.footer-col .footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+  padding: 11px 16px;
+  border: 1px solid rgba(79, 211, 226, 0.45);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.footer-col .footer-cta:hover {
+  border-color: #4fd3e2;
+  background: rgba(79, 211, 226, 0.12);
+  color: #fff;
+}
+.footer-bottom {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 24px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 22px 0 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-.footer-nav a {
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 14px;
-}
-.footer-nav a:hover {
-  color: var(--cyan);
-}
-.footer-meta {
-  color: var(--muted);
-  font-size: 13px;
+.site-footer .footer-bottom p {
   margin: 0;
-  font-family: var(--font-mono);
-  width: 100%;
+  color: #7d8e98;
+  font: 12px var(--font-mono);
+}
+.footer-top {
+  color: #c3ced5;
+  font: 12px var(--font-mono);
+  text-decoration: none;
+}
+.footer-top:hover {
+  color: #4fd3e2;
+}
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 560px) {
+  .site-footer {
+    padding-top: 56px;
+  }
+  .footer-grid {
+    gap: 32px 20px;
+    padding-bottom: 40px;
+  }
+  .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
 }
 .social-links {
   display: flex;
@@ -1366,10 +1441,6 @@ main > .contact:first-child {
   .contact,
   .institucional {
     padding: 64px 0;
-  }
-  .footer-inner {
-    flex-direction: column;
-    align-items: flex-start;
   }
   .page-hero {
     padding: 56px 0 40px;
@@ -1939,23 +2010,6 @@ body:has(.hero-film) .hero-inner {
   color: var(--home-blue);
   transform: translate(2px, -2px);
 }
-.home-page .site-footer {
-  border-top-color: #dce4e8;
-  background: #fff;
-}
-.home-page .brand-footer {
-  color: var(--home-ink);
-}
-.home-page .footer-nav a {
-  color: #64737c;
-}
-.home-page .footer-nav a:hover,
-.home-page .social-links a:hover {
-  color: var(--home-blue);
-}
-.home-page .social-links a {
-  color: #52636e;
-}
 .home-page .social-icon {
   border-color: #dce4e8;
   background: #f6f8f9;
@@ -1967,9 +2021,6 @@ body:has(.hero-film) .hero-inner {
   border-color: #a9c6cf;
   background: #edf4f5;
   box-shadow: none;
-}
-.home-page .footer-meta {
-  color: #7c8991;
 }
 @media (max-width: 900px) {
   .executive-hero-inner {
