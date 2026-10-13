@@ -2868,3 +2868,132 @@ body:has(.hero-film) .hero-inner {
     max-width: 260px;
   }
 }
+
+/* ============================================================
+   Produtos próprios (home) e Finanças Fácil
+   ============================================================ */
+.home-products {
+  padding: 96px 0;
+  border-top: 1px solid #edf0f2;
+  background: #fff;
+}
+.home-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+.home-product {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 22px;
+  border: 1px solid rgba(18, 36, 51, 0.1);
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 32px 72px -56px rgba(18, 43, 58, 0.42);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.home-product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 36px 74px -44px rgba(18, 43, 58, 0.5);
+}
+.home-product-image {
+  overflow: hidden;
+  aspect-ratio: 2.05;
+  margin-bottom: 18px;
+  background: #eef1f3;
+}
+.home-product-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+.home-product:hover .home-product-image img {
+  transform: scale(1.025);
+}
+.home-product-caption {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.home-product-caption .home-work-tag {
+  padding: 0;
+}
+.home-product h3 {
+  margin: 6px 0 8px;
+  color: var(--home-ink);
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+.home-product p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.home-product .showcase-arrow {
+  flex: none;
+}
+.ff-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--blue);
+  font: 500 12px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ff-gallery-section {
+  background: var(--panel);
+  padding-top: 88px;
+}
+.ff-gallery-section .section-title {
+  margin-top: 12px;
+}
+.ff-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 36px;
+}
+.ff-gallery figure {
+  margin: 0;
+}
+.ff-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 28px 60px -44px rgba(18, 43, 58, 0.55);
+}
+.ff-feature-shot {
+  max-width: 340px;
+  justify-self: center;
+}
+@media (max-width: 900px) {
+  .ff-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .home-products {
+    padding: 64px 0;
+  }
+  .home-products-grid {
+    grid-template-columns: 1fr;
+  }
+  .ff-gallery {
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-product,
+  .home-product-image img {
+    transition: none;
+  }
+}
