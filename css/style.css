@@ -2616,6 +2616,12 @@ body:has(.hero-film) .hero-inner {
 .ops-hero {
   padding-bottom: 40px;
 }
+.product-mark {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
 .ops-hero-actions {
   display: flex;
   flex-wrap: wrap;
