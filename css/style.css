@@ -2960,3 +2960,30 @@ body:has(.hero-film) .hero-inner {
     gap: 12px;
   }
 }
+
+.home-products {
+  padding: 96px 0;
+  background: #fff;
+  border-top: 1px solid #edf0f2;
+}
+.home-product-modules {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 4px 0;
+  padding: 0;
+  list-style: none;
+}
+.home-product-modules li {
+  padding: 3px 9px;
+  border: 1px solid #d5e0e6;
+  border-radius: 999px;
+  color: #174a66;
+  font-size: 12px;
+  font-weight: 500;
+}
+@media (max-width: 720px) {
+  .home-products {
+    padding: 64px 0;
+  }
+}
