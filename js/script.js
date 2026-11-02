@@ -144,21 +144,6 @@
   const initialLocale = lockedLocale || detectPortugueseLocale();
   applyInstitucionalLocale(initialLocale);
   applyTechdocsLocale(initialLocale);
-  if (!lockedLocale) {
-    fetch("https://api.country.is/")
-      .then((res) => res.json())
-      .then((data) => {
-        if (!data || !data.country) return;
-        if (data.country === "PT") {
-          applyInstitucionalLocale("pt-PT");
-          applyTechdocsLocale("pt-PT");
-        } else if (data.country === "BR") {
-          applyInstitucionalLocale("pt-BR");
-          applyTechdocsLocale("pt-BR");
-        }
-      })
-      .catch(() => {});
-  }
 
   /* ---------------------------------------------------------
      Mobile nav toggle

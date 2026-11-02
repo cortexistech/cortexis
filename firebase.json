@@ -8,7 +8,14 @@
       "**/node_modules/**",
       "README.md",
       "instagram/**",
-      "divulgacao/**"
+      "divulgacao/**",
+      "tmp/**",
+      "assets/cortexis-hero.mp4",
+      "assets/cortexis-hero-poster.jpg",
+      "assets/cortexis-robot-body.png",
+      "assets/cortexis-robot-helmet.png",
+      "assets/cortexis-institucional-vertical.mp4",
+      "assets/cortexis-institucional-vertical-pt-pt.mp4"
     ],
     "redirects": [
       {
