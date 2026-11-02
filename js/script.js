@@ -2,9 +2,9 @@
   "use strict";
 
   const HASH_PAGES = {
-    video: "apresentacao.html",
+    video: "sobre.html#video",
     servicos: "servicos.html",
-    processo: "processo.html",
+    processo: "sobre.html#processo",
     sobre: "sobre.html",
     contato: "contato.html",
   };
@@ -37,7 +37,7 @@
       slides[current].classList.remove("is-active");
       next.classList.add("is-active");
       showcase.href = next.dataset.href;
-      showcase.setAttribute("aria-label", `Conheça o ${next.dataset.title}, projeto desenvolvido pela Cortexis Tech`);
+      showcase.setAttribute("aria-label", `Conheça o ${next.dataset.title}, produto da Cortexis Tech`);
       if (title.textContent !== next.dataset.title) {
         text.classList.add("is-swapping");
         kind.classList.add("is-swapping");
@@ -211,20 +211,25 @@
   const form = document.getElementById("contactForm");
   const formNote = document.getElementById("formNote");
   if (form) {
+    const assunto = new URLSearchParams(location.search).get("assunto");
+    if (assunto && form.tipo.querySelector(`option[value="${CSS.escape(assunto)}"]`)) form.tipo.value = assunto;
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const data = new FormData(form);
       const submitBtn = form.querySelector('button[type="submit"]');
 
       const nome = (data.get("nome") || "").toString().trim();
-      const tipo = (data.get("tipo") || "").toString().trim();
+      const opcao = form.tipo.selectedOptions[0];
+      const grupo = opcao.parentElement.label;
+      const tipo = grupo ? `${grupo}: ${opcao.textContent}` : opcao.textContent;
       const mensagem = (data.get("mensagem") || "").toString().trim();
 
       const params = {
         name: nome,
         email: (data.get("email") || "").toString().trim(),
-        title: `Novo projeto: ${tipo}`,
-        message: `Tipo de projeto: ${tipo}\n\n${mensagem}`,
+        title: `Novo contato: ${tipo}`,
+        message: `Assunto: ${tipo}\n\n${mensagem}`,
       };
 
       if (submitBtn) submitBtn.disabled = true;

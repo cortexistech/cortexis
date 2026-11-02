@@ -27,6 +27,36 @@
         "source": "/techdocs",
         "destination": "/cortexis-ops.html",
         "type": 301
+      },
+      {
+        "source": "/apresentacao.html",
+        "destination": "/sobre.html",
+        "type": 301
+      },
+      {
+        "source": "/apresentacao",
+        "destination": "/sobre.html",
+        "type": 301
+      },
+      {
+        "source": "/processo.html",
+        "destination": "/sobre.html",
+        "type": 301
+      },
+      {
+        "source": "/processo",
+        "destination": "/sobre.html",
+        "type": 301
+      },
+      {
+        "source": "/produtos-mvps.html",
+        "destination": "/mvps.html",
+        "type": 301
+      },
+      {
+        "source": "/produtos-mvps",
+        "destination": "/mvps.html",
+        "type": 301
       }
     ]
   }

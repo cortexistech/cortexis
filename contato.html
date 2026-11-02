@@ -33,9 +33,9 @@
     </a>
 
     <nav class="main-nav" id="main-nav">
-      <a href="apresentacao.html">Apresentação</a>
+      <a href="produtos.html">Produtos</a>
       <a href="servicos.html">Serviços</a>
-      <a href="processo.html">Processo</a>
+      <a href="projetos.html">Projetos</a>
       <a href="sobre.html">Sobre</a>
       <a href="contato.html" aria-current="page">Contato</a>
     </nav>
@@ -54,8 +54,8 @@
     <div class="wrap contact-inner">
       <div class="contact-intro">
         <p class="eyebrow"><span class="eyebrow-dot"></span>Contato</p>
-        <h1 class="section-title">Tem um projeto em mente?</h1>
-        <p class="section-sub">Conte um pouco sobre o que você precisa. A gente responde o mais rápido possível.</p>
+        <h1 class="section-title">Como podemos ajudar?</h1>
+        <p class="section-sub">Peça uma demonstração de um produto ou conte o que você precisa. A gente responde o mais rápido possível.</p>
 
         <div class="contact-info">
           <a href="mailto:cortexistech@gmail.com">
@@ -118,13 +118,21 @@
           <input type="email" name="email" required>
         </label>
         <label>
-          Tipo de projeto
-          <select name="tipo">
-            <option>Site institucional</option>
-            <option>Landing page</option>
-            <option>Aplicativo mobile</option>
-            <option>MVP / Produto digital</option>
-            <option>Outro</option>
+          O que você procura
+          <select name="tipo" required>
+            <option value="" disabled selected>Selecione</option>
+            <optgroup label="Demonstração de produto">
+              <option value="techclinica">TechClínica</option>
+              <option value="cortexis-ops">Cortexis Ops</option>
+            </optgroup>
+            <optgroup label="Projeto sob medida">
+              <option value="site">Site ou landing page</option>
+              <option value="aplicativo">Aplicativo</option>
+              <option value="mvp">MVP</option>
+              <option value="agente-ia">Agente de IA</option>
+              <option value="manutencao">Manutenção e suporte</option>
+            </optgroup>
+            <option value="outro">Outro assunto</option>
           </select>
         </label>
         <label>
@@ -148,24 +156,27 @@
           <img class="brand-logo" src="img/brand/logo-horizontal-dark.svg" alt="Cortexis Tech" width="186" height="50">
         </a>
         <p class="brand-tagline">Tecnologia bem pensada.</p>
-        <p class="footer-about">Estúdio de tecnologia. Sites, aplicativos, produtos e agentes de IA, da primeira ideia à evolução contínua.</p>
+        <p class="footer-about">Sistemas de gestão prontos para usar e software sob medida para o que o seu negócio precisar.</p>
       </div>
-      <nav class="footer-col" aria-label="Estúdio">
-        <p class="footer-col-title">Estúdio</p>
-        <a href="apresentacao.html">Apresentação</a>
-        <a href="processo.html">Processo</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="cortexis-ops.html">Cortexis Ops</a>
+      <nav class="footer-col" aria-label="Produtos">
+        <p class="footer-col-title">Produtos</p>
         <a href="techclinica.html">TechClínica</a>
+        <a href="cortexis-ops.html">Cortexis Ops</a>
         <a href="financas-facil.html">Finanças Fácil</a>
       </nav>
       <nav class="footer-col" aria-label="Serviços">
         <p class="footer-col-title">Serviços</p>
         <a href="sites-landing-pages.html">Sites &amp; landing pages</a>
         <a href="aplicativos-mobile.html">Aplicativos</a>
-        <a href="produtos-mvps.html">Produtos &amp; MVPs</a>
+        <a href="mvps.html">MVPs</a>
         <a href="agentes-ia.html">Agentes de IA</a>
         <a href="manutencao-suporte.html">Manutenção &amp; suporte</a>
+      </nav>
+      <nav class="footer-col" aria-label="Empresa">
+        <p class="footer-col-title">Empresa</p>
+        <a href="projetos.html">Projetos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="sobre.html#processo">Como trabalhamos</a>
       </nav>
       <div class="footer-col">
         <p class="footer-col-title">Contato</p>
