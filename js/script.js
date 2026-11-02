@@ -2,7 +2,7 @@
   "use strict";
 
   const HASH_PAGES = {
-    video: "sobre.html#video",
+    video: "sobre.html",
     servicos: "servicos.html",
     processo: "sobre.html#processo",
     sobre: "sobre.html",
