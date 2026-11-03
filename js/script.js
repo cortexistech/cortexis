@@ -244,7 +244,7 @@
         .catch(() => {
           if (formNote) {
             formNote.textContent =
-              "Não foi possível enviar agora. Tente novamente ou escreva para cortexistech@gmail.com.";
+              "Não foi possível enviar agora. Tente novamente ou escreva para contato@cortexistech.com.";
           }
         })
         .finally(() => {
