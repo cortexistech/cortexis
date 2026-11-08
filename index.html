@@ -1,319 +1,328 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cortexis Tech — Sistemas de gestão e software sob medida</title>
-<meta name="description" content="TechClínica para clínicas e consultórios, Cortexis Ops para empresas e software sob medida para o que o seu negócio precisar.">
-<link rel="canonical" href="https://www.cortexistech.com/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.cortexistech.com/">
-<meta property="og:title" content="Cortexis Tech — Sistemas de gestão e software sob medida">
-<meta property="og:description" content="TechClínica para clínicas e consultórios, Cortexis Ops para empresas e software sob medida para o que o seu negócio precisar.">
-<meta property="og:image" content="https://www.cortexistech.com/img/og-cortexis.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="google-site-verification" content="lhBZToDTcJma5r_yh88O8WMhxg7wfUIdd7qogFdusqM" />
-<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.cortexistech.com/#organization",
-      "name": "Cortexis Tech",
-      "url": "https://www.cortexistech.com/",
-      "logo": "https://www.cortexistech.com/img/brand/logo-square-light.svg",
-      "email": "contato@cortexistech.com",
-      "telephone": "+351911181236",
-      "sameAs": [
-        "https://www.instagram.com/cortexis.tech/"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.cortexistech.com/#website",
-      "name": "Cortexis Tech",
-      "url": "https://www.cortexistech.com/",
-      "inLanguage": "pt-BR",
-      "publisher": {
-        "@id": "https://www.cortexistech.com/#organization"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cortexis Tech — Sistemas de gestão e software sob medida</title>
+  <meta name="description" content="TechClínica para clínicas e consultórios, Cortexis Ops para empresas e software sob medida para o que o seu negócio precisar.">
+  <link rel="canonical" href="https://www.cortexistech.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.cortexistech.com/">
+  <meta property="og:title" content="Cortexis Tech — Sistemas de gestão e software sob medida">
+  <meta property="og:description" content="TechClínica para clínicas e consultórios, Cortexis Ops para empresas e software sob medida para o que o seu negócio precisar.">
+  <meta property="og:image" content="https://www.cortexistech.com/img/og-cortexis.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="google-site-verification" content="lhBZToDTcJma5r_yh88O8WMhxg7wfUIdd7qogFdusqM" />
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/cx.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.cortexistech.com/#organization",
+        "name": "Cortexis Tech",
+        "url": "https://www.cortexistech.com/",
+        "logo": "https://www.cortexistech.com/img/brand/logo-square-light.svg",
+        "email": "contato@cortexistech.com",
+        "telephone": "+351911181236",
+        "sameAs": [
+          "https://www.instagram.com/cortexis.tech/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.cortexistech.com/#website",
+        "name": "Cortexis Tech",
+        "url": "https://www.cortexistech.com/",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://www.cortexistech.com/#organization"
+        }
       }
-    }
-  ]
-}
-</script>
+    ]
+  }
+  </script>
 </head>
-<body class="home-page">
+<body class="cx home">
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="preview" id="preview" aria-hidden="true"><img alt="" src="img/portfolio/grupo-ednave.jpg"></div>
 
-<a class="skip-link" href="#main">Pular para o conteúdo</a>
-
-<header class="site-header" id="top">
-  <div class="wrap header-inner">
-    <a href="index.html" class="brand" aria-label="Cortexis Tech — início">
-      <img class="brand-logo" src="img/brand/logo-square-light.svg" alt="Cortexis Tech" width="68" height="68">
-    </a>
-
-    <nav class="main-nav" id="main-nav">
-      <a href="produtos.html">Produtos</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-
-    <div class="header-actions">
-      <a href="contato.html" class="header-talk"><span class="header-talk-dot" aria-hidden="true"></span>Pedir demonstração</a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<header class="hdr" id="hdr">
+  <a href="index.html" class="logo" aria-label="Cortexis Tech — início"><img src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="126" height="34"></a>
+  <nav class="hdr-nav" aria-label="Principal">
+    <a href="produtos.html">Produtos</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <div class="hdr-actions">
+    <a href="contato.html" class="btn btn-sm hdr-cta" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menu"><span></span><span></span></button>
   </div>
 </header>
 
+<nav class="mnav" id="mnav" aria-label="Menu" hidden>
+  <a href="produtos.html"><span class="mono">01</span>Produtos</a>
+  <a href="servicos.html"><span class="mono">02</span>Serviços</a>
+  <a href="projetos.html"><span class="mono">03</span>Projetos</a>
+  <a href="sobre.html"><span class="mono">04</span>Sobre</a>
+  <a href="contato.html"><span class="mono">05</span>Contato</a>
+  <a href="contato.html" class="btn btn-solid" data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+</nav>
+
 <main id="main">
-
-  <section class="executive-hero">
-    <div class="wrap executive-hero-inner">
-      <div class="executive-copy">
-        <p class="executive-kicker"><span></span>Sistemas de gestão</p>
-        <h1>Sua operação<br><span>em ordem.</span></h1>
-        <p class="executive-lead">TechClínica para clínicas e consultórios. Cortexis Ops para empresas. Tudo num só acesso, sem planilhas espalhadas.</p>
-        <div class="executive-actions">
-          <a href="contato.html" class="executive-button">Pedir uma demonstração <span aria-hidden="true">↗</span></a>
-          <a href="produtos.html" class="executive-text-link">Ver os produtos <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-
-      <a class="executive-showcase" href="techclinica.html" aria-label="Conheça o TechClínica, produto da Cortexis Tech" data-showcase>
-        <div class="showcase-heading">
-          <span>Nossos produtos</span>
-          <span class="showcase-index">Para clínicas e consultórios</span>
-        </div>
-        <div class="showcase-image">
-          <img class="is-active" src="img/clinica/painel.webp" width="1600" height="1000" alt="Painel do TechClínica com as consultas do dia, recebimentos e contas a receber" data-href="techclinica.html" data-category="Agenda · Prontuário · Financeiro" data-title="TechClínica" data-kind="Para clínicas e consultórios">
-          <img src="img/ops/indicadores.webp" width="1600" height="1000" alt="Indicadores do Cortexis Ops com saldo, contas a receber e a pagar e gráfico de receitas e despesas" data-href="cortexis-ops.html" data-category="Docs · Frota · Estoque · Financeiro" data-title="Cortexis Ops" data-kind="Para empresas">
-        </div>
-        <div class="showcase-caption">
-          <div class="showcase-text">
-            <span class="showcase-category">Agenda · Prontuário · Financeiro</span>
-            <h2>TechClínica</h2>
-          </div>
-          <span class="showcase-arrow" aria-hidden="true">↗</span>
-        </div>
-        <span class="showcase-decoration" aria-hidden="true"></span>
-      </a>
-    </div>
-    <div class="hero-bottomline" aria-hidden="true"><span></span></div>
-  </section>
-
-  <section class="product-section" aria-labelledby="home-products-title">
-    <div class="wrap">
-      <div class="home-section-head">
-        <p class="home-section-label">Produtos</p>
-        <h2 id="home-products-title">Escolha o sistema da sua operação.</h2>
-      </div>
-      <div class="product-list">
-        <article class="product-panel">
-          <a class="product-panel-image" href="techclinica.html" tabindex="-1" aria-hidden="true"><img src="img/clinica/painel.webp" width="1600" height="1000" alt="Painel do TechClínica com as consultas do dia, recebimentos e contas a receber" loading="lazy"></a>
-          <div class="product-panel-copy">
-            <p class="home-section-label">Para clínicas e consultórios</p>
-            <h3>TechClínica</h3>
-            <p>O consultório inteiro num só acesso. Da consulta marcada ao recibo, com prontuário criptografado e o paciente confirmando pelo e-mail.</p>
-            <ul class="home-product-modules" aria-label="Áreas do TechClínica">
-            <li>Agenda</li>
-            <li>Prontuário</li>
-            <li>Financeiro</li>
-            <li>Estoque</li>
-            </ul>
-            <div class="product-panel-actions">
-              <a href="techclinica.html" class="executive-button">Conhecer o TechClínica <span aria-hidden="true">↗</span></a>
-              <a href="contato.html?assunto=techclinica" class="executive-text-link">Pedir demonstração <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="product-panel product-panel-reverse">
-          <a class="product-panel-image" href="cortexis-ops.html" tabindex="-1" aria-hidden="true"><img src="img/ops/indicadores.webp" width="1600" height="1000" alt="Indicadores do Cortexis Ops com saldo, contas a receber e a pagar e gráfico de receitas e despesas" loading="lazy"></a>
-          <div class="product-panel-copy">
-            <p class="home-section-label">Para empresas</p>
-            <h3>Cortexis Ops</h3>
-            <p>A operação da empresa num só sistema: documentos, arquivo, frota, vendas, compras, estoque, financeiro e indicadores ligados entre si.</p>
-            <ul class="home-product-modules" aria-label="Áreas do Cortexis Ops">
-            <li>TechDocs</li>
-            <li>TechArquivo</li>
-            <li>TechMaint</li>
-            <li>TechEstoque</li>
-            <li>TechFinanceiro</li>
-            <li>Indicadores</li>
-            </ul>
-            <div class="product-panel-actions">
-              <a href="cortexis-ops.html" class="executive-button">Conhecer o Cortexis Ops <span aria-hidden="true">↗</span></a>
-              <a href="contato.html?assunto=cortexis-ops" class="executive-text-link">Pedir demonstração <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-        </article>
-        <a class="product-compact" href="financas-facil.html">
-          <div>
-            <p class="home-section-label">Para uso pessoal · App Android</p>
-            <h3>Finanças Fácil</h3>
-          </div>
-          <p>Controle financeiro pessoal 100% offline e criptografado, com previsão de caixa e orçamentos.</p>
-          <span class="home-arrow-link">Conhecer o app <span aria-hidden="true">→</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="product-trust" aria-labelledby="product-trust-title">
-    <div class="wrap">
-      <div class="home-section-head">
-        <p class="home-section-label">No TechClínica e no Cortexis Ops</p>
-        <h2 id="product-trust-title">Controle e segurança desde o primeiro acesso.</h2>
-      </div>
-      <div class="product-trust-grid">
-        <div><h3>Duas etapas</h3><p>Verificação em duas etapas para proteger cada acesso.</p></div>
-        <div><h3>Perfis e permissões</h3><p>Cada pessoa vê e faz apenas o que a sua função permite.</p></div>
-        <div><h3>Auditoria</h3><p>As ações importantes ficam registradas para consulta.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-services" aria-labelledby="home-services-title">
-    <div class="wrap">
-      <div class="home-section-head home-section-head-split">
-        <div>
-          <p class="home-section-label">Sob medida</p>
-          <h2 id="home-services-title">Precisa de algo só seu? Construímos.</h2>
-        </div>
-        <a href="servicos.html" class="home-arrow-link">Ver os serviços <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="home-services-grid">
-        <a class="home-service" href="sites-landing-pages.html">
-          <span class="home-service-index">01</span>
-          <h3>Sites &amp; landing pages</h3>
-          <p>Presença digital clara, que transforma visitas em oportunidades.</p>
-        </a>
-        <a class="home-service" href="aplicativos-mobile.html">
-          <span class="home-service-index">02</span>
-          <h3>Aplicativos</h3>
-          <p>Mobile e desktop para clientes, equipes ou operações.</p>
-        </a>
-        <a class="home-service" href="mvps.html">
-          <span class="home-service-index">03</span>
-          <h3>MVPs</h3>
-          <p>Uma primeira versão funcional para validar com usuários reais.</p>
-        </a>
-        <a class="home-service" href="agentes-ia.html">
-          <span class="home-service-index">04</span>
-          <h3>Agentes de IA</h3>
-          <p>Automações que reduzem tarefas repetitivas e apoiam equipes.</p>
-        </a>
-        <a class="home-service" href="manutencao-suporte.html">
-          <span class="home-service-index">05</span>
-          <h3>Manutenção &amp; suporte</h3>
-          <p>Atualizações, correções e melhorias contínuas no que já está no ar.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-work" aria-labelledby="home-work-title">
-    <div class="wrap">
-      <div class="home-section-head home-section-head-split">
-        <div>
-          <p class="home-section-label">Projetos sob medida</p>
-          <h2 id="home-work-title">Trabalho entregue, no ar.</h2>
-        </div>
-        <a href="projetos.html" class="home-arrow-link">Ver todos os projetos <span aria-hidden="true">→</span></a>
-      </div>
-      <div class="home-work-grid">
-        <a class="home-work-card" href="https://www.grupoednave.com.br" target="_blank" rel="noopener">
-          <div class="home-work-image"><img src="img/portfolio/grupo-ednave.jpg" width="1280" height="800" alt="Página inicial do site da Grupo Ednave" loading="lazy"></div>
-          <span class="home-work-tag">Site institucional · Transporte</span>
-          <h3>Grupo Ednave</h3>
-          <p>Transporte fluvial de petróleo e biocombustíveis na Amazônia.</p>
-        </a>
-        <a class="home-work-card" href="https://www.pilarsingular.pt" target="_blank" rel="noopener">
-          <div class="home-work-image"><img src="img/portfolio/pilar-singular.jpg" width="1280" height="800" alt="Página inicial do site da Pilar Singular" loading="lazy"></div>
-          <span class="home-work-tag">Site institucional · Imobiliário</span>
-          <h3>Pilar Singular</h3>
-          <p>Investimento imobiliário, alojamento local e consultoria.</p>
-        </a>
-        <a class="home-work-card" href="agentes-ia.html">
-          <div class="home-work-image"><img src="img/portfolio/medsim.jpg" width="1280" height="800" alt="Simulação de anamnese no MED-SIM" loading="lazy"></div>
-          <span class="home-work-tag">Agente de IA · Educação</span>
-          <h3>MED-SIM</h3>
-          <p>Simulador clínico com paciente virtual movido a IA.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="home-cta">
-    <div class="wrap home-cta-inner">
-      <div>
-        <h2>Veja o sistema funcionando.</h2>
-        <p>Peça uma demonstração e descubra como ele se encaixa na rotina da sua empresa.</p>
-      </div>
-      <a href="contato.html" class="executive-button">Pedir uma demonstração <span aria-hidden="true">↗</span></a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="brand-footer" aria-label="Cortexis Tech — início">
-          <img class="brand-logo" src="img/brand/logo-horizontal-dark.svg" alt="Cortexis Tech" width="186" height="50">
-        </a>
-        <p class="brand-tagline">Tecnologia bem pensada.</p>
-        <p class="footer-about">Sistemas de gestão prontos para usar e software sob medida para o que o seu negócio precisar.</p>
-      </div>
-      <nav class="footer-col" aria-label="Produtos">
-        <p class="footer-col-title">Produtos</p>
-        <a href="techclinica.html">TechClínica</a>
-        <a href="cortexis-ops.html">Cortexis Ops</a>
-        <a href="financas-facil.html">Finanças Fácil</a>
-      </nav>
-      <nav class="footer-col" aria-label="Serviços">
-        <p class="footer-col-title">Serviços</p>
-        <a href="sites-landing-pages.html">Sites &amp; landing pages</a>
-        <a href="aplicativos-mobile.html">Aplicativos</a>
-        <a href="mvps.html">MVPs</a>
-        <a href="agentes-ia.html">Agentes de IA</a>
-        <a href="manutencao-suporte.html">Manutenção &amp; suporte</a>
-      </nav>
-      <nav class="footer-col" aria-label="Empresa">
-        <p class="footer-col-title">Empresa</p>
-        <a href="projetos.html">Projetos</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="sobre.html#processo">Como trabalhamos</a>
-      </nav>
-      <div class="footer-col">
-        <p class="footer-col-title">Contato</p>
-        <a class="footer-contact" href="https://wa.me/351911181236" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.55a7.45 7.45 0 0 1 2.4 14.5l.18 3.05-3.35-1.48A7.45 7.45 0 1 1 12 4.55Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="9.15" cy="12" r="1.05" fill="currentColor"/><circle cx="12" cy="12" r="1.05" fill="currentColor"/><circle cx="14.85" cy="12" r="1.05" fill="currentColor"/></svg><span>WhatsApp</span></a>
-        <a class="footer-contact" href="mailto:contato@cortexistech.com"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.8" y="6" width="16.4" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><span>contato@cortexistech.com</span></a>
-        <a class="footer-contact" href="https://www.instagram.com/cortexis.tech/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.35" stroke="currentColor" stroke-width="1.4"/><circle cx="16.55" cy="7.45" r="1.05" fill="currentColor"/></svg><span>@cortexis.tech</span></a>
-        <a class="footer-cta" href="contato.html">Fale com a gente <span aria-hidden="true">↗</span></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Cortexis Tech · <a class="footer-legal" href="privacidade.html">Política de privacidade</a></p>
-      <a href="#top" class="footer-top">Voltar ao topo <span aria-hidden="true">↑</span></a>
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <p class="kicker mono hero-in">Sistemas de gestão · Software sob medida</p>
+  <h1 id="hero-title">
+    <span class="line"><span class="li">Sua operação</span></span>
+    <span class="line"><span class="li">em <em>ordem estrita.</em></span></span>
+  </h1>
+  <div class="hero-foot">
+    <p class="hero-in">Sistemas de gestão prontos para usar e software sob medida para operações que não aceitam improviso.</p>
+    <div class="ctas hero-in">
+      <a href="contato.html" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+      <a href="#produtos" class="btn" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Explorar sistemas</span><span class="ico" aria-hidden="true">↓</span></a>
     </div>
   </div>
+  <nav class="hero-index" aria-label="O que fazemos">
+    <a class="hero-in" href="techclinica.html"><span class="n mono">01</span><span><b>TechClínica</b><span>Para clínicas e consultórios</span></span><span class="a" aria-hidden="true">↗</span></a>
+    <a class="hero-in" href="cortexis-ops.html"><span class="n mono">02</span><span><b>Cortexis Ops</b><span>Para empresas</span></span><span class="a" aria-hidden="true">↗</span></a>
+    <a class="hero-in" href="servicos.html"><span class="n mono">03</span><span><b>Sob medida</b><span>Sites, aplicativos, MVPs e IA</span></span><span class="a" aria-hidden="true">↗</span></a>
+  </nav>
+</section>
+
+<!-- ===== 01 MANIFESTO ===== -->
+<section class="sec manifesto" aria-labelledby="man-label">
+  <div class="sec-head">
+    <div class="label mono" id="man-label"><b>01</b><span>Nosso princípio</span></div>
+  </div>
+  <p id="manifesto">A complexidade operacional é o maior inimigo da escala. Por isso eliminamos o ruído: planilhas espalhadas, sistemas que não conversam, informação que depende de alguém lembrar. No lugar, uma estrutura única, <em>segura e auditável.</em></p>
+</section>
+
+<!-- ===== 02 PRODUTOS ===== -->
+<section class="products" id="produtos" aria-labelledby="prod-title">
+  <div class="h-track" id="hTrack">
+    <div class="panel panel-intro">
+      <div class="label mono"><b>02</b><span>Produtos</span></div>
+      <h2 class="h2" id="prod-title" data-reveal>Dois sistemas. <em>Uma mesma disciplina.</em></h2>
+      <dl class="compare">
+        <div><dt class="mono">TechClínica</dt><dd>Clínicas e consultórios</dd></div>
+        <div><dt class="mono">Cortexis Ops</dt><dd>Empresas de operação</dd></div>
+        <div><dt class="mono">Finanças Fácil</dt><dd>Uso pessoal, Android</dd></div>
+      </dl>
+      <div class="hint mono" aria-hidden="true"><i></i>Continue rolando</div>
+    </div>
+
+    <article class="panel product" data-product="techclinica" aria-labelledby="p-tc">
+      <div class="product-copy">
+        <div class="who mono"><b>TechClínica</b><span>Para clínicas e consultórios</span></div>
+        <h3 id="p-tc">Prática clínica. <em>Sincronia absoluta.</em></h3>
+        <p>O consultório inteiro num só acesso. Da consulta marcada ao recibo, com prontuário criptografado e o paciente confirmando a consulta pelo e-mail.</p>
+        <ul class="facts">
+          <li>Agenda com confirmação pelo paciente</li>
+          <li>Prontuário criptografado</li>
+          <li>Financeiro e recibos</li>
+          <li>Estoque e relatórios</li>
+        </ul>
+        <div class="tabs-wrap">
+          <div class="tabs" role="group" aria-label="Módulos do TechClínica"><span class="ind"></span></div>
+          <span class="illus mono">Dados ilustrativos</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-solid btn-sm" type="button" data-open="techclinica" data-liquid><span class="fill"></span><span class="lbl">Ver as telas</span><span class="ico" aria-hidden="true">+</span></button>
+          <a class="link" href="techclinica.html">Conhecer o TechClínica <span class="ico" aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="dash" aria-hidden="true"></div>
+    </article>
+
+    <article class="panel product" data-product="ops" aria-labelledby="p-ops">
+      <div class="product-copy">
+        <div class="who mono"><b>Cortexis Ops</b><span>Para empresas</span></div>
+        <h3 id="p-ops">A operação inteira <em>sob o seu controle.</em></h3>
+        <p>Documentos, arquivo, frota, vendas, compras, estoque, financeiro e indicadores ligados entre si. Uma visão única para quem decide com base em dados.</p>
+        <ul class="facts">
+          <li>TechDocs e TechArquivo</li>
+          <li>TechMaint para a frota</li>
+          <li>Vendas, compras e TechEstoque</li>
+          <li>TechFinanceiro e indicadores</li>
+        </ul>
+        <div class="tabs-wrap">
+          <div class="tabs" role="group" aria-label="Módulos do Cortexis Ops"><span class="ind"></span></div>
+          <span class="illus mono">Dados ilustrativos</span>
+        </div>
+        <div class="product-actions">
+          <button class="btn btn-solid btn-sm" type="button" data-open="ops" data-liquid><span class="fill"></span><span class="lbl">Ver as telas</span><span class="ico" aria-hidden="true">+</span></button>
+          <a class="link" href="cortexis-ops.html">Conhecer o Cortexis Ops <span class="ico" aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="dash" aria-hidden="true"></div>
+    </article>
+
+    <a class="panel product-mini" href="financas-facil.html">
+      <div>
+        <div class="who mono"><b>Finanças Fácil</b><span>App Android</span></div>
+        <h3>Suas finanças, <em>offline.</em></h3>
+        <p>Controle financeiro pessoal 100% offline e criptografado, com previsão de caixa e orçamentos.</p>
+      </div>
+      <div class="shot"><img src="img/financas/destaque.webp" alt="Tela inicial do app Finanças Fácil" loading="lazy"></div>
+      <span class="link">Conhecer o app <span class="ico" aria-hidden="true">↘</span></span>
+    </a>
+
+    <div class="panel panel-end">
+      <h2 class="h2">Quer ver com a rotina <em>da sua empresa?</em></h2>
+      <div class="product-actions">
+        <a href="contato.html" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Agendar demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 03 SEGURANÇA ===== -->
+<section class="sec trust" aria-labelledby="trust-title">
+  <div class="sec-head">
+    <div>
+      <div class="label mono"><b>03</b><span>Segurança · No TechClínica e no Cortexis Ops</span></div>
+      <h2 class="h2" id="trust-title" data-reveal>Controle e segurança <em>desde o primeiro acesso.</em></h2>
+    </div>
+  </div>
+  <div class="trust-grid">
+    <div class="pillar" data-fade>
+      <svg viewBox="0 0 72 72" aria-hidden="true"><circle class="spin" cx="36" cy="36" r="34" stroke-dasharray="2 6"/><circle class="spin rev" cx="36" cy="36" r="24" stroke-dasharray="40 12"/><rect x="28" y="33" width="16" height="12" rx="2"/><path d="M31 33v-4a5 5 0 0 1 10 0v4"/></svg>
+      <span class="tag mono">Acesso</span>
+      <h3>Verificação em duas etapas</h3>
+      <p>Cada acesso é confirmado duas vezes. A senha sozinha não abre o sistema.</p>
+    </div>
+    <div class="pillar" data-fade>
+      <svg viewBox="0 0 72 72" aria-hidden="true"><rect x="2" y="2" width="68" height="68" rx="3" stroke-dasharray="3 5"/><rect class="slide" x="16" y="16" width="40" height="40" rx="2"/><rect x="29" y="29" width="14" height="14" rx="1" class="blink acc"/></svg>
+      <span class="tag mono">Permissões</span>
+      <h3>Perfis e permissões</h3>
+      <p>Cada pessoa vê e faz apenas o que a sua função exige.</p>
+    </div>
+    <div class="pillar" data-fade>
+      <svg viewBox="0 0 72 72" aria-hidden="true"><path d="M6 14h60M6 28h44M6 42h52M6 56h32"/><circle cx="62" cy="28" r="3" class="blink acc"/><path class="acc" d="M46 52l5 5 10-11"/></svg>
+      <span class="tag mono">Registro</span>
+      <h3>Auditoria</h3>
+      <p>As ações importantes ficam registradas: quem fez, o quê e quando.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 04 SOB MEDIDA ===== -->
+<section class="sec tailor" id="sob-medida" aria-labelledby="tailor-title">
+  <canvas id="glyphs" aria-hidden="true"></canvas>
+  <div class="sec-head">
+    <div>
+      <div class="label mono"><b>04</b><span>Serviços sob medida</span></div>
+      <h2 class="h2" id="tailor-title" data-reveal>Precisa de algo só seu? <em>Nós construímos.</em></h2>
+    </div>
+    <a href="servicos.html" class="link">Ver todos os serviços <span class="ico" aria-hidden="true">↘</span></a>
+  </div>
+  <div class="t-grid">
+    <a class="t-item" href="sites-landing-pages.html" data-n="01"><span class="n">01</span><div><h3>Sites &amp; landing pages</h3><p>Presença digital clara, que transforma visitas em oportunidades.</p></div><span class="go" aria-hidden="true">↗</span></a>
+    <a class="t-item" href="aplicativos-mobile.html" data-n="02"><span class="n">02</span><div><h3>Aplicativos</h3><p>Mobile e desktop para clientes, equipes e operações.</p></div><span class="go" aria-hidden="true">↗</span></a>
+    <a class="t-item" href="mvps.html" data-n="03"><span class="n">03</span><div><h3>MVPs</h3><p>Uma primeira versão funcional para validar a ideia com usuários reais.</p></div><span class="go" aria-hidden="true">↗</span></a>
+    <a class="t-item" href="agentes-ia.html" data-n="04"><span class="n">04</span><div><h3>Agentes de IA</h3><p>Automações que assumem tarefas repetitivas e apoiam a sua equipe.</p></div><span class="go" aria-hidden="true">↗</span></a>
+    <a class="t-item" href="manutencao-suporte.html" data-n="05"><span class="n">05</span><div><h3>Manutenção &amp; suporte</h3><p>Atualizações, correções e melhorias contínuas no que já está no ar.</p></div><span class="go" aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<!-- ===== 05 PROJETOS ===== -->
+<section class="sec work" id="projetos" aria-labelledby="work-title">
+  <div class="sec-head">
+    <div>
+      <div class="label mono"><b>05</b><span>Projetos entregues</span></div>
+      <h2 class="h2" id="work-title" data-reveal>Trabalho entregue, <em>no ar.</em></h2>
+    </div>
+    <a href="projetos.html" class="link">Ver todos os projetos <span class="ico" aria-hidden="true">↘</span></a>
+  </div>
+  <div class="w-list">
+    <a class="w-row" href="https://www.grupoednave.com.br" target="_blank" rel="noopener" data-img="img/portfolio/grupo-ednave.jpg">
+      <span class="n mono">01</span><h3>Grupo Ednave</h3><span class="t"><b>Site institucional · Transporte</b>Transporte fluvial de petróleo e biocombustíveis na Amazônia.</span><span class="a" aria-hidden="true">↗</span>
+      <span class="thumb"><img src="img/portfolio/grupo-ednave.jpg" width="1280" height="800" alt="Página inicial do site da Grupo Ednave" loading="lazy"></span>
+    </a>
+    <a class="w-row" href="https://www.pilarsingular.pt" target="_blank" rel="noopener" data-img="img/portfolio/pilar-singular.jpg">
+      <span class="n mono">02</span><h3>Pilar Singular</h3><span class="t"><b>Site institucional · Imobiliário</b>Investimento imobiliário, alojamento local e consultoria.</span><span class="a" aria-hidden="true">↗</span>
+      <span class="thumb"><img src="img/portfolio/pilar-singular.jpg" width="1280" height="800" alt="Página inicial do site da Pilar Singular" loading="lazy"></span>
+    </a>
+    <a class="w-row" href="agentes-ia.html" data-img="img/portfolio/medsim.jpg">
+      <span class="n mono">03</span><h3>MED-SIM</h3><span class="t"><b>Agente de IA · Educação</b>Simulador clínico com paciente virtual movido a IA.</span><span class="a" aria-hidden="true">↗</span>
+      <span class="thumb"><img src="img/portfolio/medsim.jpg" width="1280" height="800" alt="Simulação de anamnese no MED-SIM" loading="lazy"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ===== 06 CONTATO ===== -->
+<section class="cta" id="contato" aria-labelledby="cta-title">
+  <div class="label mono"><b>06</b><span>Próximo passo</span></div>
+  <h2 class="h2" id="cta-title" data-reveal>Veja o sistema <em>funcionando.</em></h2>
+  <div class="cta-foot">
+    <p>Peça uma demonstração do TechClínica ou do Cortexis Ops e veja como ele se encaixa na rotina da sua empresa.</p>
+    <div class="cta-actions">
+      <a href="contato.html" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+      <ul class="cta-channels">
+        <li><a href="https://wa.me/351911181236" target="_blank" rel="noopener"><span class="mono">WhatsApp</span>+351 911 181 236</a></li>
+        <li><a href="mailto:contato@cortexistech.com"><span class="mono">E-mail</span>contato@cortexistech.com</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="ftr-brand">
+    <img src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="141" height="38" loading="lazy">
+    <p class="ftr-tag">Tecnologia bem pensada.</p>
+    <p>Sistemas de gestão prontos para usar e software sob medida para o que o seu negócio precisar.</p>
+  </div>
+  <nav aria-label="Produtos"><span class="mono">Produtos</span><a href="techclinica.html">TechClínica</a><a href="cortexis-ops.html">Cortexis Ops</a><a href="financas-facil.html">Finanças Fácil</a></nav>
+  <nav aria-label="Serviços"><span class="mono">Serviços</span><a href="sites-landing-pages.html">Sites &amp; landing pages</a><a href="aplicativos-mobile.html">Aplicativos</a><a href="mvps.html">MVPs</a><a href="agentes-ia.html">Agentes de IA</a><a href="manutencao-suporte.html">Manutenção &amp; suporte</a></nav>
+  <nav aria-label="Empresa"><span class="mono">Empresa</span><a href="projetos.html">Projetos</a><a href="sobre.html">Sobre</a><a href="sobre.html#processo">Como trabalhamos</a></nav>
+  <div><span class="mono">Contato</span><a href="https://wa.me/351911181236" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contato@cortexistech.com">contato@cortexistech.com</a><a href="https://www.instagram.com/cortexis.tech/" target="_blank" rel="noopener">@cortexis.tech</a><a href="contato.html">Fale com a gente ↗</a></div>
+  <div class="ftr-bottom"><span>© 2026 Cortexis Tech · <a href="privacidade.html">Política de privacidade</a></span><a href="#inicio">Voltar ao topo ↑</a></div>
 </footer>
 
-<script src="js/script.js?v=medsim"></script>
+<dialog class="pd" id="pd" aria-labelledby="pd-title">
+  <button class="pd-close" id="pdClose" type="button" aria-label="Fechar">✕</button>
+  <div class="pd-inner">
+    <div class="pd-copy">
+      <div class="who mono" id="pdWho"></div>
+      <h2 id="pd-title"></h2>
+      <p id="pdText"></p>
+      <ul class="pd-mods" id="pdMods"></ul>
+      <div class="pd-actions">
+        <a class="btn btn-solid" id="pdCta" href="contato.html" data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+        <a class="link" id="pdMore" href="produtos.html">Página do produto <span class="ico" aria-hidden="true">↘</span></a>
+      </div>
+    </div>
+    <div class="pd-stage">
+      <div class="pd-shot"><img id="pdImg" alt=""></div>
+      <div class="pd-cap mono"><span id="pdCap"></span><span id="pdIdx"></span></div>
+    </div>
+  </div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="js/cx.js" defer></script>
+<script src="js/home.js" defer></script>
+<script type="module" src="js/home-hero.js"></script>
 </body>
 </html>

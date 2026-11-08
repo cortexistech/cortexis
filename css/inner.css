@@ -1,0 +1,64 @@
+/* =========================================================
+   Cortexis Tech — páginas internas
+   Carregado depois de style.css e cx.css: leva o formato novo
+   (tipografia, botões, cabeçalho de página, faixa de contato)
+   aos componentes que as páginas já usam.
+   ========================================================= */
+body.cx.inner{
+  --font-display:var(--sans);
+  --font-body:var(--sans);
+  --font-mono:var(--mono);
+  --wrap:1440px;
+  --void:#ffffff;
+  --blue:#174a66;
+  background:#fff;
+  line-height:1.6;
+}
+.inner .wrap{max-width:var(--wrap);padding-left:var(--gutter);padding-right:var(--gutter)}
+.inner h1,.inner h2,.inner h3{font-weight:400;letter-spacing:-.025em}
+.inner h1 em,.inner h2 em,.inner .section-title em{color:var(--cyan);font-weight:400}
+
+/* cabeçalho de cada página */
+.inner .page-hero{
+  padding:clamp(150px,16vw,220px) 0 clamp(64px,8vw,110px);
+  background:radial-gradient(ellipse 60% 70% at 88% 25%,rgba(84,184,197,.13),transparent 70%),#fff;
+  border-bottom:1px solid var(--line);
+}
+.inner .page-hero h1.section-title{font-size:clamp(3rem,7.4vw,7rem);font-weight:300;letter-spacing:-.045em;line-height:.98;max-width:15ch;margin:0 0 .35em}
+.inner .page-hero .section-sub{font-size:clamp(16px,1.3vw,19px);max-width:56ch;color:var(--muted);line-height:1.7}
+.inner .eyebrow{font-family:var(--mono);letter-spacing:.14em;color:var(--muted);margin-bottom:28px;gap:12px}
+.inner .eyebrow-dot{width:28px;background:var(--cyan)}
+
+.inner .back-link{display:flex;width:max-content;margin-bottom:36px;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.inner .back-link:hover{color:var(--cyan)}
+
+/* títulos de seção */
+.inner .section-title{font-weight:300;font-size:clamp(2rem,4.2vw,3.8rem);letter-spacing:-.04em;line-height:1.04}
+.inner .section-sub{color:var(--muted)}
+
+/* divisória */
+.inner .divider span{width:auto;max-width:none;margin:0 var(--gutter)}
+.inner .divider span::after{box-shadow:none;left:0}
+
+/* botões antigos no formato novo */
+.inner .btn{border-radius:999px;padding:1.05em 1.7em;font-size:14px;font-weight:500}
+.inner .btn:hover{transform:none}
+.inner .btn-primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.inner .btn-primary:hover{background:var(--cyan);border-color:var(--cyan);color:#fff}
+.inner .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.inner .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+.inner .btn-small{padding:.8em 1.25em;font-size:13px}
+
+/* faixa de contato no fim das páginas: mesmo fechamento da home */
+.inner .contact-cta{background:var(--navy);color:#fff;padding:clamp(96px,12vw,170px) 0}
+.inner .contact-cta .section-title{color:#fff;font-size:clamp(2.4rem,6vw,5.4rem);max-width:16ch}
+.inner .contact-cta .section-sub{color:rgba(255,255,255,.72)}
+.inner .contact-cta-inner{align-items:flex-end;gap:40px}
+.inner .contact-cta .btn-primary{background:#fff;color:var(--navy);border-color:#fff}
+.inner .contact-cta .btn-primary:hover{background:var(--cyan);color:#fff;border-color:var(--cyan)}
+.inner .divider:has(+ .contact-cta),.inner .page-hero + .divider{display:none}
+
+/* corpo das páginas */
+.inner .page-body{padding-top:clamp(56px,7vw,96px);padding-bottom:clamp(72px,9vw,120px)}
+.inner p{color:var(--muted)}
+.inner strong{color:var(--ink);font-weight:500}

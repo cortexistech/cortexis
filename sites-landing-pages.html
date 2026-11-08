@@ -19,35 +19,41 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cx.css">
+  <link rel="stylesheet" href="css/inner.css">
 </head>
-<body>
+<body class="cx inner">
 
 <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
-<header class="site-header" id="top">
-  <div class="wrap header-inner">
-    <a href="index.html" class="brand" aria-label="Cortexis Tech — início">
-      <img class="brand-logo" src="img/brand/logo-square-light.svg" alt="Cortexis Tech" width="68" height="68">
-    </a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
 
-    <nav class="main-nav" id="main-nav">
-      <a href="produtos.html">Produtos</a>
-      <a href="servicos.html" aria-current="page">Serviços</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="sobre.html">Sobre</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-
-    <div class="header-actions">
-      <a href="contato.html?assunto=site" class="header-talk"><span class="header-talk-dot" aria-hidden="true"></span>Pedir demonstração</a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+<header class="hdr" id="hdr">
+  <a href="index.html" class="logo" aria-label="Cortexis Tech — início"><img src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="126" height="34"></a>
+  <nav class="hdr-nav" aria-label="Principal">
+    <a href="produtos.html">Produtos</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+  <div class="hdr-actions">
+    <a href="contato.html" class="btn btn-sm hdr-cta" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menu"><span></span><span></span></button>
   </div>
 </header>
+
+<nav class="mnav" id="mnav" aria-label="Menu" hidden>
+  <a href="produtos.html"><span class="mono">01</span>Produtos</a>
+  <a href="servicos.html"><span class="mono">02</span>Serviços</a>
+  <a href="projetos.html"><span class="mono">03</span>Projetos</a>
+  <a href="sobre.html"><span class="mono">04</span>Sobre</a>
+  <a href="contato.html"><span class="mono">05</span>Contato</a>
+  <a href="contato.html" class="btn btn-solid" data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+</nav>
 
 <main id="main">
 
@@ -55,7 +61,7 @@
     <div class="wrap">
       <a href="servicos.html" class="back-link">← Voltar aos serviços</a>
       <p class="eyebrow"><span class="eyebrow-dot"></span>Serviço</p>
-      <h1 class="section-title">Sites &amp; Landing Pages</h1>
+      <h1 class="section-title">Sites &amp; <em>landing pages</em></h1>
       <p class="section-sub">
         Sites institucionais, landing pages de alta conversão e lojas simples.
         Todos os projetos abaixo estão no ar — clique para visitar o site oficial de cada cliente.
@@ -116,51 +122,23 @@
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="brand-footer" aria-label="Cortexis Tech — início">
-          <img class="brand-logo" src="img/brand/logo-horizontal-dark.svg" alt="Cortexis Tech" width="186" height="50">
-        </a>
-        <p class="brand-tagline">Tecnologia bem pensada.</p>
-        <p class="footer-about">Sistemas de gestão prontos para usar e software sob medida para o que o seu negócio precisar.</p>
-      </div>
-      <nav class="footer-col" aria-label="Produtos">
-        <p class="footer-col-title">Produtos</p>
-        <a href="techclinica.html">TechClínica</a>
-        <a href="cortexis-ops.html">Cortexis Ops</a>
-        <a href="financas-facil.html">Finanças Fácil</a>
-      </nav>
-      <nav class="footer-col" aria-label="Serviços">
-        <p class="footer-col-title">Serviços</p>
-        <a href="sites-landing-pages.html">Sites &amp; landing pages</a>
-        <a href="aplicativos-mobile.html">Aplicativos</a>
-        <a href="mvps.html">MVPs</a>
-        <a href="agentes-ia.html">Agentes de IA</a>
-        <a href="manutencao-suporte.html">Manutenção &amp; suporte</a>
-      </nav>
-      <nav class="footer-col" aria-label="Empresa">
-        <p class="footer-col-title">Empresa</p>
-        <a href="projetos.html">Projetos</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="sobre.html#processo">Como trabalhamos</a>
-      </nav>
-      <div class="footer-col">
-        <p class="footer-col-title">Contato</p>
-        <a class="footer-contact" href="https://wa.me/351911181236" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4.55a7.45 7.45 0 0 1 2.4 14.5l.18 3.05-3.35-1.48A7.45 7.45 0 1 1 12 4.55Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="9.15" cy="12" r="1.05" fill="currentColor"/><circle cx="12" cy="12" r="1.05" fill="currentColor"/><circle cx="14.85" cy="12" r="1.05" fill="currentColor"/></svg><span>WhatsApp</span></a>
-        <a class="footer-contact" href="mailto:contato@cortexistech.com"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.8" y="6" width="16.4" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="m4.5 7 7.5 6 7.5-6" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg><span>contato@cortexistech.com</span></a>
-        <a class="footer-contact" href="https://www.instagram.com/cortexis.tech/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4.2" y="4.2" width="15.6" height="15.6" rx="4.2" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3.35" stroke="currentColor" stroke-width="1.4"/><circle cx="16.55" cy="7.45" r="1.05" fill="currentColor"/></svg><span>@cortexis.tech</span></a>
-        <a class="footer-cta" href="contato.html">Fale com a gente <span aria-hidden="true">↗</span></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 Cortexis Tech · <a class="footer-legal" href="privacidade.html">Política de privacidade</a></p>
-      <a href="#top" class="footer-top">Voltar ao topo <span aria-hidden="true">↑</span></a>
-    </div>
+<footer class="ftr">
+  <div class="ftr-brand">
+    <img src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="141" height="38" loading="lazy">
+    <p class="ftr-tag">Tecnologia bem pensada.</p>
+    <p>Sistemas de gestão prontos para usar e software sob medida para o que o seu negócio precisar.</p>
   </div>
+  <nav aria-label="Produtos"><span class="mono">Produtos</span><a href="techclinica.html">TechClínica</a><a href="cortexis-ops.html">Cortexis Ops</a><a href="financas-facil.html">Finanças Fácil</a></nav>
+  <nav aria-label="Serviços"><span class="mono">Serviços</span><a href="sites-landing-pages.html">Sites &amp; landing pages</a><a href="aplicativos-mobile.html">Aplicativos</a><a href="mvps.html">MVPs</a><a href="agentes-ia.html">Agentes de IA</a><a href="manutencao-suporte.html">Manutenção &amp; suporte</a></nav>
+  <nav aria-label="Empresa"><span class="mono">Empresa</span><a href="projetos.html">Projetos</a><a href="sobre.html">Sobre</a><a href="sobre.html#processo">Como trabalhamos</a></nav>
+  <div><span class="mono">Contato</span><a href="https://wa.me/351911181236" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contato@cortexistech.com">contato@cortexistech.com</a><a href="https://www.instagram.com/cortexis.tech/" target="_blank" rel="noopener">@cortexis.tech</a><a href="contato.html">Fale com a gente ↗</a></div>
+  <div class="ftr-bottom"><span>© 2026 Cortexis Tech · <a href="privacidade.html">Política de privacidade</a></span><a href="#main">Voltar ao topo ↑</a></div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="js/cx.js" defer></script>
 <script src="js/script.js"></script>
 </body>
 </html>
