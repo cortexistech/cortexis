@@ -27,9 +27,9 @@ html[data-theme="dark"]{
 /* troca suave de tema (sem View Transitions) */
 html.theme-fade body,html.theme-fade body *{transition:background-color .5s ease,color .5s ease,border-color .5s ease!important}
 ::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
-html.lenis,html.lenis body{height:auto}
-.lenis.lenis-smooth{scroll-behavior:auto!important}
-.lenis.lenis-stopped{overflow:hidden}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+html{scroll-padding-top:84px}
+html:has(dialog[open]){overflow:hidden}
 
 body.cx{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 .cx em,.cx .serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
@@ -131,3 +131,7 @@ html[data-theme="dark"] .logo-d{display:block}
 .theme-btn .i-sun{display:none}
 html[data-theme="dark"] .theme-btn .i-sun{display:block}
 html[data-theme="dark"] .theme-btn .i-moon{display:none}
+
+/* "Pedir demonstração" do cabeçalho some enquanto o do topo da página está visível */
+.cx .hdr .hdr-cta{transition:color .45s var(--ease),border-color .45s,opacity .4s ease,transform .5s var(--ease),visibility .4s}
+.cx .hdr .hdr-cta.is-away{opacity:0;visibility:hidden;transform:translateY(-8px)}

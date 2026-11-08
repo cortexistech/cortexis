@@ -38,11 +38,12 @@ if (canvas) {
     const uniforms = {
       uTime: { value: 0 }, uOrder: { value: reduced ? 1 : 0 }, uPR: { value: DPR }, uMouse: { value: new THREE.Vector2() },
       uColA: { value: new THREE.Color(0x247f90) }, uColB: { value: new THREE.Color(0x174a66) },
+      uBoost: { value: 1 }, uSize: { value: 1 },
     };
     const mat = new THREE.ShaderMaterial({
       uniforms, transparent: true, depthWrite: false, blending: THREE.NormalBlending,
       vertexShader: `
-        uniform float uTime; uniform float uOrder; uniform float uPR; uniform vec2 uMouse;
+        uniform float uTime; uniform float uOrder; uniform float uPR; uniform vec2 uMouse; uniform float uSize;
         attribute vec3 aChaos; attribute float aSeed;
         varying float vA; varying float vAcc;
         void main(){
@@ -57,17 +58,17 @@ if (canvas) {
           gl_Position = projectionMatrix*mv;
           vAcc = step(.985, aSeed);
           float pulse = .5 + .5*sin(uTime*2. + aSeed*40.);
-          gl_PointSize = (2.6 + vAcc*3.*pulse + smoothstep(2.6,0.,d)*2.4) * uPR * (12./-mv.z);
+          gl_PointSize = (2.6 + vAcc*3.*pulse + smoothstep(2.6,0.,d)*2.4) * uSize * uPR * (12./-mv.z);
           vA = smoothstep(30., 8., -mv.z) * (.45 + .55*t);
         }`,
       fragmentShader: `
-        uniform vec3 uColA; uniform vec3 uColB;
+        uniform vec3 uColA; uniform vec3 uColB; uniform float uBoost;
         varying float vA; varying float vAcc;
         void main(){
           float r = length(gl_PointCoord - .5);
           if(r > .5) discard;
           vec3 col = mix(uColA, uColB, vAcc);
-          gl_FragColor = vec4(col, min(1., smoothstep(.5, .1, r)*vA*1.1));
+          gl_FragColor = vec4(col, min(1., smoothstep(.5, .1, r)*vA*1.1*uBoost));
         }`,
     });
     const group = new THREE.Group();
@@ -77,12 +78,14 @@ if (canvas) {
     group.rotation.set(-0.42, 0.32, 0.04);
     scene.add(group);
 
-    // Cores por tema: no claro, pontos azul-petróleo opacos; no escuro, ciano e verde com brilho somado.
+    // Cores por tema: no claro, pontos azul-petróleo; no escuro, ciano e verde-ácido.
     const applyTheme = () => {
       const dark = document.documentElement.getAttribute("data-theme") === "dark";
       uniforms.uColA.value.set(dark ? 0x4fd3e2 : 0x247f90);
       uniforms.uColB.value.set(dark ? 0xc5f24a : 0x174a66);
-      mat.blending = dark ? THREE.AdditiveBlending : THREE.NormalBlending;
+      mat.blending = THREE.NormalBlending;
+      uniforms.uBoost.value = dark ? 2.2 : 1;   // no escuro, pontos mais opacos e maiores
+      uniforms.uSize.value = dark ? 1.3 : 1;
       mat.needsUpdate = true;
       lineMat.color.set(dark ? 0x4fd3e2 : 0x174a66);
       if (reduced) renderer.render(scene, camera);

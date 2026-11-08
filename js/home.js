@@ -215,11 +215,11 @@
       gsap.from(".w-row", { y: 50, opacity: 0, duration: 1.1, stagger: 0.1, ease: "expo.out", scrollTrigger: { trigger: ".w-list", start: "top 88%" } });
 
       if (wide) {
-        const sec = $("#produtos"), track = $("#hTrack");
+        const sec = $("#produtos"), pinEl = $("#hPin"), track = $("#hTrack");
         sec.classList.add("is-horizontal");
         requestAnimationFrame(() => $$(".product").forEach((c) => moveInd(c, c._mod || 0, true)));
         const dist = () => track.scrollWidth - innerWidth;
-        const tween = gsap.to(track, { x: () => -dist(), ease: "none", scrollTrigger: { trigger: sec, start: "top top", end: () => "+=" + dist(), pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1 } });
+        const tween = gsap.to(track, { x: () => -dist(), ease: "none", scrollTrigger: { trigger: pinEl, start: "top top", end: () => "+=" + Math.round(dist() * 0.7), pin: true, scrub: 0.4, invalidateOnRefresh: true, anticipatePin: 1 } });
         $$(".product, .product-mini", track).forEach((p) => gsap.from(p, { scale: 0.93, opacity: 0.35, ease: "none", scrollTrigger: { trigger: p, containerAnimation: tween, start: "left right", end: "left 45%", scrub: true } }));
         return () => { sec.classList.remove("is-horizontal"); gsap.set(track, { clearProps: "transform" }); };
       }
@@ -232,11 +232,25 @@
       const pv = $("#preview"), img = $("img", pv);
       const px = gsap.quickTo(pv, "x", { duration: 0.7, ease: "power3.out" }), py = gsap.quickTo(pv, "y", { duration: 0.7, ease: "power3.out" });
       gsap.set(pv, { xPercent: -50, yPercent: -50 });
-      $$(".w-row").forEach((row) => {
-        row.addEventListener("mouseenter", () => { img.src = row.dataset.img; gsap.to(pv, { opacity: 1, scale: 1, rotate: -3, duration: 0.6, ease: "expo.out" }); });
-        row.addEventListener("mouseleave", () => gsap.to(pv, { opacity: 0, scale: 0.6, rotate: 0, duration: 0.5, ease: "expo.out" }));
-      });
-      addEventListener("pointermove", (e) => { px(e.clientX + 40); py(e.clientY); }, { passive: true });
+      // Não depende de mouseenter/mouseleave: eles não disparam quando a página rola
+      // por baixo do cursor parado. A cada movimento ou rolagem, vê o que está sob o cursor.
+      let mx = -1, my = -1, current = null, queued = false;
+      const show = (row) => {
+        if (row === current) return;
+        current = row;
+        if (row) { img.src = row.dataset.img; gsap.to(pv, { opacity: 1, scale: 1, rotate: -3, duration: 0.6, ease: "expo.out", overwrite: "auto" }); }
+        else gsap.to(pv, { opacity: 0, scale: 0.6, rotate: 0, duration: 0.4, ease: "expo.out", overwrite: "auto" });
+      };
+      const check = () => {
+        queued = false;
+        const el = mx < 0 ? null : document.elementFromPoint(mx, my);
+        show(el ? el.closest(".w-row") : null);
+      };
+      const queue = () => { if (!queued) { queued = true; requestAnimationFrame(check); } };
+      addEventListener("pointermove", (e) => { mx = e.clientX; my = e.clientY; px(mx + 40); py(my); queue(); }, { passive: true });
+      addEventListener("scroll", queue, { passive: true });
+      document.documentElement.addEventListener("pointerleave", () => { mx = -1; show(null); });
+      addEventListener("blur", () => { mx = -1; show(null); });
     }
   }
 

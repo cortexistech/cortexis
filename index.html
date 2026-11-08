@@ -71,7 +71,7 @@
     <a href="contato.html">Contato</a>
   </nav>
   <div class="hdr-actions">
-    <a href="contato.html" class="btn btn-sm hdr-cta" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
+    <a href="contato.html" class="btn btn-sm hdr-cta" data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
     <button class="theme-btn" id="themeBtn" type="button" aria-label="Ativar tema escuro"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg></button>
     <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menu"><span></span><span></span></button>
   </div>
@@ -96,7 +96,7 @@
     <span class="line"><span class="li">em <em>ordem estrita.</em></span></span>
   </h1>
   <div class="hero-foot">
-    <p class="hero-in">Sistemas de gestão prontos para usar e software sob medida para operações que não aceitam improviso.</p>
+    <p class="hero-in">Para operações que não aceitam improviso. Do primeiro atendimento ao fechamento do mês, num só acesso.</p>
     <div class="ctas hero-in">
       <a href="contato.html" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
       <a href="#produtos" class="btn" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Explorar sistemas</span><span class="ico" aria-hidden="true">↓</span></a>
@@ -119,28 +119,21 @@
 
 <!-- ===== 02 PRODUTOS ===== -->
 <section class="products" id="produtos" aria-labelledby="prod-title">
-  <div class="h-track" id="hTrack">
-    <div class="panel panel-intro">
+  <div class="products-head">
+    <div>
       <div class="label mono"><b>02</b><span>Produtos</span></div>
       <h2 class="h2" id="prod-title" data-reveal>Dois sistemas. <em>Uma mesma disciplina.</em></h2>
-      <dl class="compare">
-        <div><dt class="mono">TechClínica</dt><dd>Clínicas e consultórios</dd></div>
-        <div><dt class="mono">Cortexis Ops</dt><dd>Empresas de operação</dd></div>
-      </dl>
-      <div class="hint mono" aria-hidden="true"><i></i>Continue rolando</div>
     </div>
+    <p class="illus mono">Painéis com dados ilustrativos</p>
+  </div>
+  <div class="h-pin" id="hPin">
+  <div class="h-track" id="hTrack">
 
     <article class="panel product" data-product="techclinica" aria-labelledby="p-tc">
       <div class="product-copy">
-        <div class="who mono"><b>TechClínica</b><span>Para clínicas e consultórios</span></div>
+        <div class="who mono"><b>TechClínica</b><span>Gestão clínica</span></div>
         <h3 id="p-tc">Prática clínica. <em>Sincronia absoluta.</em></h3>
         <p>O consultório inteiro num só acesso. Da consulta marcada ao recibo, com prontuário criptografado e o paciente confirmando a consulta pelo e-mail.</p>
-        <ul class="facts">
-          <li>Agenda com confirmação pelo paciente</li>
-          <li>Prontuário criptografado</li>
-          <li>Financeiro e recibos</li>
-          <li>Estoque e relatórios</li>
-        </ul>
         <div class="tabs-wrap">
           <div class="tabs" role="group" aria-label="Módulos do TechClínica"><span class="ind"></span></div>
           <span class="illus mono">Dados ilustrativos</span>
@@ -155,15 +148,9 @@
 
     <article class="panel product" data-product="ops" aria-labelledby="p-ops">
       <div class="product-copy">
-        <div class="who mono"><b>Cortexis Ops</b><span>Para empresas</span></div>
+        <div class="who mono"><b>Cortexis Ops</b><span>Gestão da operação</span></div>
         <h3 id="p-ops">A operação inteira <em>sob o seu controle.</em></h3>
         <p>Documentos, arquivo, frota, vendas, compras, estoque, financeiro e indicadores ligados entre si. Uma visão única para quem decide com base em dados.</p>
-        <ul class="facts">
-          <li>TechDocs e TechArquivo</li>
-          <li>TechMaint para a frota</li>
-          <li>Vendas, compras e TechEstoque</li>
-          <li>TechFinanceiro e indicadores</li>
-        </ul>
         <div class="tabs-wrap">
           <div class="tabs" role="group" aria-label="Módulos do Cortexis Ops"><span class="ind"></span></div>
           <span class="illus mono">Dados ilustrativos</span>
@@ -186,12 +173,7 @@
       <span class="link">Conhecer o app <span class="ico" aria-hidden="true">↘</span></span>
     </a>
 
-    <div class="panel panel-end">
-      <h2 class="h2">Quer ver com a rotina <em>da sua empresa?</em></h2>
-      <div class="product-actions">
-        <a href="contato.html" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Agendar demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
-      </div>
-    </div>
+  </div>
   </div>
 </section>
 
@@ -259,19 +241,15 @@
         <div class="case-bar" aria-hidden="true"><i></i><i></i><i></i><span class="mono">MED-SIM · Simulação de anamnese</span></div>
         <div class="case-img"><img src="img/portfolio/medsim.jpg" width="1280" height="800" alt="Simulação de anamnese em andamento no MED-SIM, com o paciente virtual respondendo perguntas" loading="lazy"></div>
       </div>
-      <figcaption class="case-badge mono"><span class="dot" aria-hidden="true"></span>Paciente virtual movido a IA</figcaption>
+      <figcaption class="case-badge mono"><span class="dot" aria-hidden="true"></span>Google Gemini · Node.js</figcaption>
     </figure>
     <div class="case-copy">
-      <p class="case-lead">Simulador clínico educativo em que o aluno conduz a consulta com um paciente virtual e recebe, no fim, uma avaliação do próprio desempenho.</p>
+      <p class="case-lead">Simulador clínico educativo, usado por alunos, professores e administradores.</p>
       <ol class="case-steps">
         <li><span class="mono">01</span><div><b>Anamnese em português</b><p>O aluno pergunta e o paciente virtual responde, como numa consulta.</p></div></li>
         <li><span class="mono">02</span><div><b>Exame físico e prontuário</b><p>Liberados só por comando explícito, como na prática clínica.</p></div></li>
         <li><span class="mono">03</span><div><b>Relatório de desempenho</b><p>Ao final, um relatório estruturado do que foi feito na simulação.</p></div></li>
       </ol>
-      <dl class="case-facts">
-        <div><dt class="mono">Quem usa</dt><dd>Alunos, professores e administradores</dd></div>
-        <div><dt class="mono">Tecnologia</dt><dd>Google Gemini · Node.js</dd></div>
-      </dl>
       <div class="product-actions">
         <a href="contato.html?assunto=agente-ia" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Quero um agente assim</span><span class="ico" aria-hidden="true">↗</span></a>
       </div>
@@ -283,7 +261,7 @@
 <section class="sec work" id="projetos" aria-labelledby="work-title">
   <div class="sec-head">
     <div>
-      <div class="label mono"><b>06</b><span>Projetos e produtos no ar</span></div>
+      <div class="label mono"><b>06</b><span>Projetos</span></div>
       <h2 class="h2" id="work-title" data-reveal>Trabalho entregue, <em>no ar.</em></h2>
     </div>
     <a href="projetos.html" class="link">Ver todos os projetos <span class="ico" aria-hidden="true">↘</span></a>
@@ -312,10 +290,6 @@
     <p>Peça uma demonstração do TechClínica ou do Cortexis Ops e veja como ele se encaixa na rotina da sua empresa.</p>
     <div class="cta-actions">
       <a href="contato.html" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
-      <ul class="cta-channels">
-        <li><a href="https://wa.me/351911181236" target="_blank" rel="noopener"><span class="mono">WhatsApp</span>+351 911 181 236</a></li>
-        <li><a href="mailto:contato@cortexistech.com"><span class="mono">E-mail</span>contato@cortexistech.com</a></li>
-      </ul>
     </div>
   </div>
 </section>
@@ -325,7 +299,6 @@
   <div class="ftr-brand">
     <img class="logo-l" src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="141" height="38" loading="lazy"><img class="logo-d" src="img/brand/logo-horizontal-dark.svg" alt="" aria-hidden="true" width="141" height="38" loading="lazy">
     <p class="ftr-tag">Tecnologia bem pensada.</p>
-    <p>Sistemas de gestão prontos para usar e software sob medida para o que o seu negócio precisar.</p>
   </div>
   <nav aria-label="Produtos"><span class="mono">Produtos</span><a href="techclinica.html">TechClínica</a><a href="cortexis-ops.html">Cortexis Ops</a><a href="financas-facil.html">Finanças Fácil</a></nav>
   <nav aria-label="Serviços"><span class="mono">Serviços</span><a href="sites-landing-pages.html">Sites &amp; landing pages</a><a href="aplicativos-mobile.html">Aplicativos</a><a href="mvps.html">MVPs</a><a href="agentes-ia.html">Agentes de IA</a><a href="manutencao-suporte.html">Manutenção &amp; suporte</a></nav>
@@ -356,7 +329,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <script src="js/cx.js" defer></script>
 <script src="js/home.js" defer></script>
 <script type="module" src="js/home-hero.js"></script>

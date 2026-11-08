@@ -75,6 +75,15 @@
     if (!saved) applyTheme(e.matches ? "dark" : "light", false);
   });
 
+  /* ----- "Pedir demonstração" do cabeçalho -----
+     Se o topo da página já tem um botão de contato, o do cabeçalho fica escondido
+     enquanto aquele estiver visível, para não aparecerem dois ao mesmo tempo. */
+  const hdrCta = $(".hdr-cta");
+  const heroCta = $('.hero a[href^="contato.html"], .page-hero a[href^="contato.html"]');
+  if (hdrCta && heroCta && "IntersectionObserver" in window) {
+    new IntersectionObserver(([en]) => hdrCta.classList.toggle("is-away", en.isIntersecting)).observe(heroCta);
+  }
+
   /* ----- menu móvel ----- */
   const btn = $("#menuBtn"), mnav = $("#mnav");
   if (btn && mnav) {
@@ -124,19 +133,9 @@
   if (!hasGsap) return;
   gsap.registerPlugin(ScrollTrigger);
 
-  /* ----- scroll suave ----- */
-  if (!reduced && window.Lenis) {
-    const lenis = (CX.lenis = new Lenis({ lerp: 0.09, smoothWheel: true }));
-    lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((t) => lenis.raf(t * 1000));
-    gsap.ticker.lagSmoothing(0);
-    $$('a[href^="#"]').forEach((a) => a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (id.length < 2) return;
-      const t = $(id);
-      if (t) { e.preventDefault(); lenis.scrollTo(t, { duration: 1.6, offset: id === "#inicio" ? 0 : -80 }); }
-    }));
-  }
+  /* ----- rolagem -----
+     Rolagem nativa do navegador, sem suavização por JavaScript: responde na hora
+     ao mouse e ao trackpad. Links internos rolam suave pelo CSS (scroll-behavior). */
 
   /* ----- barra de progresso e cabeçalho ----- */
   const progress = $("#progress");
@@ -188,8 +187,8 @@
           const r = m.el.getBoundingClientRect();
           const cx = r.left + r.width / 2 - (gsap.getProperty(m.el, "x") || 0);
           const cy = r.top + r.height / 2 - (gsap.getProperty(m.el, "y") || 0);
-          const dx = mx - cx, dy = my - cy, R = Math.max(r.width, r.height) * 0.9 + 40;
-          if (Math.hypot(dx, dy) < R) { m.xTo(dx * 0.3); m.yTo(dy * 0.36); m.lx(dx * 0.1); m.ly(dy * 0.1); m.near = true; }
+          const dx = mx - cx, dy = my - cy, R = Math.max(r.width, r.height) * 0.6 + 20;
+          if (Math.hypot(dx, dy) < R) { m.xTo(dx * 0.22); m.yTo(dy * 0.3); m.lx(dx * 0.08); m.ly(dy * 0.08); m.near = true; }
           else if (m.near) { m.near = false; m.xTo(0); m.yTo(0); m.lx(0); m.ly(0); }
         });
       });
