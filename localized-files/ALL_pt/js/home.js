@@ -247,7 +247,14 @@
     const sec = cv.parentElement, ctx = cv.getContext("2d");
     const CH = "{}[]<>/=;:()01+*#&|$_".split("");
     const COUNT = fine ? 1000 : 360;
-    let w = 0, h = 0, parts = [], running = false, hovering = false;
+    let w = 0, h = 0, parts = [], running = false, hovering = false, cA = "36,127,144", cB = "82,99,110";
+    const colors = () => {
+      const cs = getComputedStyle(document.documentElement);
+      cA = cs.getPropertyValue("--cyan-rgb").trim().split(/\s+/).join(",") || cA;
+      cB = cs.getPropertyValue("--ti-rgb").trim().split(/\s+/).join(",") || cB;
+    };
+    colors();
+    document.addEventListener("theme:change", colors);
     const size = () => { const dpr = Math.min(devicePixelRatio, 2), r = sec.getBoundingClientRect(); w = r.width; h = r.height; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
     const init = () => { size(); parts = Array.from({ length: COUNT }, () => ({ x: Math.random() * w, y: Math.random() * h, vx: (Math.random() - 0.5) * 0.15, vy: -(0.1 + Math.random() * 0.35), c: CH[(Math.random() * CH.length) | 0], tx: 0, ty: 0, t: false, a: 0.1 })); };
     function targets(item) {
@@ -284,7 +291,7 @@
           if (p.x < -10) p.x = w + 10; if (p.x > w + 10) p.x = -10;
           p.a += ((hovering ? 0.06 : 0.16) - p.a) * 0.05;
         }
-        ctx.fillStyle = p.t ? `rgba(36,127,144,${p.a.toFixed(3)})` : `rgba(82,99,110,${p.a.toFixed(3)})`;
+        ctx.fillStyle = p.t ? `rgba(${cA},${p.a.toFixed(3)})` : `rgba(${cB},${p.a.toFixed(3)})`;
         ctx.fillText(p.c, p.x, p.y);
       }
       if (Math.random() < 0.02) parts[(Math.random() * parts.length) | 0].c = CH[(Math.random() * CH.length) | 0];

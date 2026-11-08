@@ -77,6 +77,19 @@ if (canvas) {
     group.rotation.set(-0.42, 0.32, 0.04);
     scene.add(group);
 
+    // Cores por tema: no claro, pontos azul-petróleo opacos; no escuro, ciano e verde com brilho somado.
+    const applyTheme = () => {
+      const dark = document.documentElement.getAttribute("data-theme") === "dark";
+      uniforms.uColA.value.set(dark ? 0x4fd3e2 : 0x247f90);
+      uniforms.uColB.value.set(dark ? 0xc5f24a : 0x174a66);
+      mat.blending = dark ? THREE.AdditiveBlending : THREE.NormalBlending;
+      mat.needsUpdate = true;
+      lineMat.color.set(dark ? 0x4fd3e2 : 0x174a66);
+      if (reduced) renderer.render(scene, camera);
+    };
+    applyTheme();
+    document.addEventListener("theme:change", applyTheme);
+
     const resize = () => {
       const w = canvas.clientWidth, h = canvas.clientHeight;
       renderer.setSize(w, h, false);

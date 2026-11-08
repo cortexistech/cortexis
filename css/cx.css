@@ -9,10 +9,24 @@
   --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
   --sans:"Inter",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --ti-rgb:82 99 110;
+  --solid-bg:#122433; --solid-fg:#ffffff; --on-accent:#ffffff; --hdr-solid:rgba(255,255,255,.82);
   --gutter:clamp(16px,4vw,56px);
   --ease:cubic-bezier(.16,1,.3,1);
   color-scheme:light;
 }
+/* tema escuro: escolhido pela pessoa ou pela preferência do sistema (script no <head>) */
+html[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#050608; --bg2:#0a0d12; --bg3:#10151c;
+  --ink:#eef1f4; --muted:#9aa3ab; --faint:#7d868e;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.18);
+  --cyan:#4fd3e2; --cyan-rgb:79 211 226; --acid:#c5f24a; --ti:#a9b0b7; --ti-rgb:169 176 183; --soft:#4fd3e2;
+  --solid-bg:#eef1f4; --solid-fg:#050608; --on-accent:#050608; --hdr-solid:rgba(5,6,8,.78);
+}
+/* troca suave de tema (sem View Transitions) */
+html.theme-fade body,html.theme-fade body *{transition:background-color .5s ease,color .5s ease,border-color .5s ease!important}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
 .lenis.lenis-stopped{overflow:hidden}
@@ -35,7 +49,7 @@ body.cx{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-
 .hdr{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px var(--gutter);transition:transform .7s var(--ease),background .4s,border-color .4s;border-bottom:1px solid transparent}
 .hdr.is-hidden,.hdr.is-intro{transform:translateY(-110%)}
 .hdr.is-intro{transition-duration:1.2s}
-.hdr.is-solid{background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.hdr.is-solid{background:var(--hdr-solid);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
 .hdr .logo{display:block;line-height:0}
 .hdr .logo img{height:34px;width:auto}
 .hdr-nav{display:flex;gap:30px}
@@ -61,10 +75,10 @@ body.cx{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-
 /* ---------- buttons & links ---------- */
 .cx .btn{position:relative;display:inline-flex;align-items:center;gap:.9em;padding:1.05em 1.7em;border:1px solid var(--line2);border-radius:999px;background:transparent;color:var(--ink);font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:.01em;line-height:1.2;white-space:nowrap;text-decoration:none;overflow:hidden;isolation:isolate;cursor:pointer;transition:color .45s var(--ease),border-color .45s}
 .cx .btn .fill{position:absolute;left:var(--x,50%);top:var(--y,50%);width:0;aspect-ratio:1;border-radius:50%;background:var(--cyan);transform:translate(-50%,-50%);transition:width .75s var(--ease);z-index:-1}
-.cx .btn:hover,.cx .btn:focus-visible{color:#fff;border-color:var(--cyan)}
+.cx .btn:hover,.cx .btn:focus-visible{color:var(--on-accent);border-color:var(--cyan)}
 .cx .btn:hover .fill,.cx .btn:focus-visible .fill{width:260%}
 .cx .btn .lbl,.cx .btn .ico{display:inline-block;pointer-events:none}
-.cx .btn-solid{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cx .btn-solid{background:var(--solid-bg);color:var(--solid-fg);border-color:var(--solid-bg)}
 .cx .btn-sm{padding:.8em 1.25em;font-size:13px}
 .cx .link{display:inline-flex;gap:.6em;align-items:center;font-size:14px;color:var(--muted);text-decoration:none;transition:color .3s}
 .cx .link:hover{color:var(--ink)}
@@ -104,3 +118,16 @@ body.cx{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-
 .lang-switch button{font:inherit;color:var(--faint);background:none;border:1px solid transparent;border-radius:999px;padding:4px 10px;cursor:pointer;transition:color .3s,border-color .3s}
 .lang-switch button:hover{color:var(--ink)}
 .lang-switch button[aria-pressed="true"]{color:var(--ink);border-color:var(--line2)}
+
+/* logo nas duas versões */
+.logo-d{display:none}
+html[data-theme="dark"] .logo-l{display:none}
+html[data-theme="dark"] .logo-d{display:block}
+
+/* botão de tema */
+.theme-btn{width:44px;height:44px;border:1px solid var(--line2);border-radius:50%;background:none;color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:border-color .3s,transform .6s var(--ease)}
+.theme-btn:hover{border-color:var(--cyan);transform:rotate(-20deg)}
+.theme-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;grid-area:1/1}
+.theme-btn .i-sun{display:none}
+html[data-theme="dark"] .theme-btn .i-sun{display:block}
+html[data-theme="dark"] .theme-btn .i-moon{display:none}

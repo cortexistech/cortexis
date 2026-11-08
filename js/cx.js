@@ -32,6 +32,49 @@
     });
   });
 
+  /* ----- tema claro / escuro -----
+     O script no <head> já aplicou o tema (escolha salva ou preferência do sistema). */
+  const root = document.documentElement;
+  const themeBtn = $("#themeBtn");
+  const metaTheme = $('meta[name="theme-color"]');
+  const syncTheme = () => {
+    const dark = root.getAttribute("data-theme") === "dark";
+    if (themeBtn) {
+      themeBtn.setAttribute("aria-label", dark ? "Ativar tema claro" : "Ativar tema escuro");
+      themeBtn.setAttribute("aria-pressed", String(dark));
+    }
+    if (metaTheme) metaTheme.setAttribute("content", dark ? "#050608" : "#ffffff");
+  };
+  const applyTheme = (t, save) => {
+    root.setAttribute("data-theme", t);
+    if (save) { try { localStorage.setItem("cx-theme", t); } catch (e) {} }
+    syncTheme();
+    document.dispatchEvent(new CustomEvent("theme:change", { detail: t }));
+  };
+  syncTheme();
+  if (themeBtn) themeBtn.addEventListener("click", (e) => {
+    const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    if (document.startViewTransition && !reduced) {
+      const r = themeBtn.getBoundingClientRect();
+      const x = r.left + r.width / 2, y = r.top + r.height / 2;
+      const radius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+      document.startViewTransition(() => applyTheme(next, true)).ready.then(() => {
+        root.animate({ clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+          { duration: 700, easing: "cubic-bezier(.16,1,.3,1)", pseudoElement: "::view-transition-new(root)" });
+      });
+    } else {
+      root.classList.add("theme-fade");
+      applyTheme(next, true);
+      setTimeout(() => root.classList.remove("theme-fade"), 600);
+    }
+  });
+  // Sem escolha salva, acompanha a mudança do sistema.
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    let saved = null;
+    try { saved = localStorage.getItem("cx-theme"); } catch (err) {}
+    if (!saved) applyTheme(e.matches ? "dark" : "light", false);
+  });
+
   /* ----- menu móvel ----- */
   const btn = $("#menuBtn"), mnav = $("#mnav");
   if (btn && mnav) {

@@ -11,7 +11,7 @@ body.cx.inner{
   --wrap:1440px;
   --void:#ffffff;
   --blue:#174a66;
-  background:#fff;
+  background:var(--bg);
   line-height:1.6;
 }
 .inner .wrap{max-width:var(--wrap);padding-left:var(--gutter);padding-right:var(--gutter)}
@@ -21,7 +21,7 @@ body.cx.inner{
 /* cabeçalho de cada página */
 .inner .page-hero{
   padding:clamp(150px,16vw,220px) 0 clamp(64px,8vw,110px);
-  background:radial-gradient(ellipse 60% 70% at 88% 25%,rgba(84,184,197,.13),transparent 70%),#fff;
+  background:radial-gradient(ellipse 60% 70% at 88% 25%,rgb(var(--cyan-rgb)/.12),transparent 70%),var(--bg);
   border-bottom:1px solid var(--line);
 }
 .inner .page-hero h1.section-title{font-size:clamp(3rem,7.4vw,7rem);font-weight:300;letter-spacing:-.045em;line-height:.98;max-width:15ch;margin:0 0 .35em}
@@ -43,8 +43,8 @@ body.cx.inner{
 /* botões antigos no formato novo */
 .inner .btn{border-radius:999px;padding:1.05em 1.7em;font-size:14px;font-weight:500}
 .inner .btn:hover{transform:none}
-.inner .btn-primary{background:var(--navy);color:#fff;border-color:var(--navy)}
-.inner .btn-primary:hover{background:var(--cyan);border-color:var(--cyan);color:#fff}
+.inner .btn-primary{background:var(--solid-bg);color:var(--solid-fg);border-color:var(--solid-bg)}
+.inner .btn-primary:hover{background:var(--cyan);border-color:var(--cyan);color:var(--on-accent)}
 .inner .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
 .inner .btn-ghost:hover{border-color:var(--cyan);color:var(--cyan)}
 .inner .btn-small{padding:.8em 1.25em;font-size:13px}
@@ -55,7 +55,7 @@ body.cx.inner{
 .inner .contact-cta .section-sub{color:rgba(255,255,255,.72)}
 .inner .contact-cta-inner{align-items:flex-end;gap:40px}
 .inner .contact-cta .btn-primary{background:#fff;color:var(--navy);border-color:#fff}
-.inner .contact-cta .btn-primary:hover{background:var(--cyan);color:#fff;border-color:var(--cyan)}
+.inner .contact-cta .btn-primary:hover{background:var(--cyan);color:var(--on-accent);border-color:var(--cyan)}
 .inner .divider:has(+ .contact-cta),.inner .page-hero + .divider{display:none}
 
 /* corpo das páginas */
@@ -72,3 +72,28 @@ body.cx.inner{
 .inner .portfolio-card-feature p{font-size:16px}
 .inner .portfolio-grid:has(.portfolio-card-feature){justify-content:stretch;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
 @media (max-width:760px){.inner .portfolio-card-feature{grid-template-columns:1fr}.inner .portfolio-card-feature .portfolio-thumb,.inner .portfolio-card-feature > :not(.portfolio-thumb){grid-column:1;grid-row:auto}.inner .portfolio-card-feature .portfolio-thumb{margin-bottom:20px}}
+
+/* ---------- tema escuro: variáveis e fundos fixos herdados do style.css ---------- */
+html[data-theme="dark"] body.cx.inner{
+  --void:var(--bg); --panel:var(--bg2); --panel-2:var(--bg3);
+  --blue:#7fdbe8; --silver:var(--muted);
+  --home-ink:var(--ink); --home-muted:var(--muted); --home-blue:#7fdbe8; --home-accent:var(--cyan); --home-line:var(--line);
+}
+html[data-theme="dark"] .inner .contact-cta{background:var(--bg2);border-top:1px solid var(--line)}
+html[data-theme="dark"] .inner .contact-cta .btn-primary{background:var(--solid-bg);color:var(--solid-fg);border-color:var(--solid-bg)}
+html[data-theme="dark"] .inner .services,html[data-theme="dark"] .inner .contact,
+html[data-theme="dark"] .inner .service-guide,html[data-theme="dark"] .inner .home-cta,
+html[data-theme="dark"] .inner .product-section,html[data-theme="dark"] .inner .service-bridge{background:var(--bg)}
+html[data-theme="dark"] .inner .card,html[data-theme="dark"] .inner .node-dot,html[data-theme="dark"] .inner .social-icon,
+html[data-theme="dark"] .inner .contact-form,html[data-theme="dark"] .inner .ops-module,html[data-theme="dark"] .inner .ops-feature-alt,
+html[data-theme="dark"] .inner .ops-mobile,html[data-theme="dark"] .inner .ff-gallery-section,html[data-theme="dark"] .inner .service-guide-feature,
+html[data-theme="dark"] .inner .product-panel-image{background:var(--bg2)}
+html[data-theme="dark"] .inner .card:hover,html[data-theme="dark"] .inner .service-choice:hover,html[data-theme="dark"] .inner .service-guide-feature:hover,
+html[data-theme="dark"] .inner .service-guide-support:hover,html[data-theme="dark"] .inner .contact-info a:hover .social-icon,
+html[data-theme="dark"] .inner .social-links a:hover .social-icon{background:var(--bg3);border-color:var(--line2)}
+html[data-theme="dark"] .inner .portfolio-thumb{background:var(--bg3)}
+html[data-theme="dark"] .inner .contact-form input,html[data-theme="dark"] .inner .contact-form select,html[data-theme="dark"] .inner .contact-form textarea{background:var(--bg3);color:var(--ink);border-color:var(--line2)}
+html[data-theme="dark"] .inner .ops-shot-hero{background:linear-gradient(180deg,var(--bg2) 0%,var(--bg2) 62%,var(--bg) 62%)}
+html[data-theme="dark"] .inner .ops-frame img{background:var(--bg2);border-color:var(--line)}
+html[data-theme="dark"] .inner .home-product-modules li{border-color:var(--line2);color:var(--cyan)}
+html[data-theme="dark"] .inner .portfolio-card-feature .portfolio-thumb{box-shadow:0 40px 90px -45px rgba(79,211,226,.2)}
