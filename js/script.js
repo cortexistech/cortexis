@@ -82,6 +82,9 @@
   const techdocsVideo = document.querySelector("video[data-film='techdocs']");
 
   function detectPortugueseLocale() {
+    // O idioma da página (escolhido pelo país no Firebase Hosting) manda.
+    const pageLang = document.documentElement.lang;
+    if (pageLang === "pt-PT" || pageLang === "pt-BR") return pageLang;
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
     const langs = Array.from(navigator.languages || [navigator.language || ""]);
     if (/^(Europe\/Lisbon|Atlantic\/Madeira|Atlantic\/Azores)$/i.test(tz)) return "pt-PT";

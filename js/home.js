@@ -207,6 +207,11 @@
       gsap.fromTo($$(".mw", man), { opacity: 0.12 }, { opacity: 1, stagger: 0.05, ease: "none", scrollTrigger: { trigger: man, start: "top 80%", end: "bottom 50%", scrub: true } });
 
       gsap.from(".t-item", { y: 70, opacity: 0, duration: 1.2, stagger: 0.08, ease: "expo.out", scrollTrigger: { trigger: ".t-grid", start: "top 85%" } });
+      gsap.timeline({ scrollTrigger: { trigger: ".case-grid", start: "top 80%" }, defaults: { ease: "expo.out" } })
+        .from(".case-frame", { clipPath: "inset(12% 12% 12% 12% round 10px)", duration: 1.6 })
+        .from(".case-img", { scale: 1.25, duration: 1.8 }, 0)
+        .from(".case-badge", { y: 30, opacity: 0, duration: 1 }, 0.5)
+        .from(".case-copy > *, .case-steps li", { y: 30, opacity: 0, duration: 1, stagger: 0.06 }, 0.2);
       gsap.from(".w-row", { y: 50, opacity: 0, duration: 1.1, stagger: 0.1, ease: "expo.out", scrollTrigger: { trigger: ".w-list", start: "top 88%" } });
 
       if (wide) {

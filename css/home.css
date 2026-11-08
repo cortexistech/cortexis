@@ -225,3 +225,28 @@ dialog.pd::backdrop{background:rgba(18,36,51,.2)}
 @media (max-width:900px){.pd-inner{grid-template-columns:1fr}.pd-stage{padding-top:0}}
 
 @media (prefers-reduced-motion:reduce){.plane{transform:rotateX(8deg) rotateY(-8deg)}}
+
+/* ---------- caso em destaque (MED-SIM) ---------- */
+.case{border-top:1px solid var(--line);background:linear-gradient(180deg,#fff,var(--bg2))}
+.case-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:center;margin-top:64px}
+.case-shot{position:relative;margin:0}
+.case-frame{border:1px solid var(--line2);border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 60px 120px -50px rgba(23,74,102,.35)}
+.case-bar{display:flex;align-items:center;gap:6px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--bg2)}
+.case-bar i{width:9px;height:9px;border-radius:50%;background:rgba(18,36,51,.14)}
+.case-bar .mono{margin-left:12px;font-size:10px;color:var(--faint)}
+.case-img{overflow:hidden}
+.case-img img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;transition:transform 1.4s var(--ease)}
+.case-shot:hover .case-img img{transform:scale(1.03)}
+.case-badge{position:absolute;left:24px;bottom:-18px;display:flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--navy);color:#fff;font-size:10px}
+.case-badge .dot{width:6px;height:6px;border-radius:50%;background:#7fe0b8;animation:pulse 1.6s ease-in-out infinite}
+.case-lead{margin:0;font-size:clamp(17px,1.4vw,20px);line-height:1.55;color:var(--ink);font-weight:300}
+.case-steps{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid var(--line)}
+.case-steps li{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.case-steps .mono{color:var(--cyan);padding-top:3px}
+.case-steps b{display:block;font-weight:500;color:var(--ink)}
+.case-steps p{margin:4px 0 0;color:var(--muted);font-size:14.5px}
+.case-facts{margin:24px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.case-facts dt{color:var(--faint);font-size:10px;margin-bottom:4px}
+.case-facts dd{margin:0;font-size:14px;color:var(--ink)}
+.case .product-actions{margin-top:32px}
+@media (max-width:900px){.case-grid{grid-template-columns:1fr}.case-facts{grid-template-columns:1fr}}

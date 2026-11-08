@@ -19,6 +19,19 @@
     if (href === page) a.setAttribute("aria-current", "page");
   });
 
+  /* ----- versão do site: Brasil ou Portugal -----
+     O Firebase Hosting escolhe a versão pelo país do IP. O cookie
+     firebase-country-override deixa o visitante trocar manualmente. */
+  const isPT = document.documentElement.lang === "pt-PT";
+  $$(".lang-switch [data-country]").forEach((b) => {
+    b.setAttribute("aria-pressed", (b.dataset.country === "pt") === isPT);
+    b.addEventListener("click", () => {
+      if ((b.dataset.country === "pt") === isPT) return;
+      document.cookie = `firebase-country-override=${b.dataset.country}; path=/; max-age=31536000; SameSite=Lax; Secure`;
+      location.reload();
+    });
+  });
+
   /* ----- menu móvel ----- */
   const btn = $("#menuBtn"), mnav = $("#mnav");
   if (btn && mnav) {

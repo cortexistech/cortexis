@@ -97,3 +97,10 @@ body.cx{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);-
 @media (max-width:980px){.ftr{grid-template-columns:1fr 1fr}.ftr-brand{grid-column:1/-1}}
 
 @media (prefers-reduced-motion:reduce){.cx *,.cx *::before,.cx *::after{animation:none!important;transition-duration:.01ms!important}}
+
+/* seletor da versão do site (Brasil / Portugal) */
+.lang-switch{display:inline-flex;align-items:center;gap:4px}
+.lang-switch>span{margin-right:6px}
+.lang-switch button{font:inherit;color:var(--faint);background:none;border:1px solid transparent;border-radius:999px;padding:4px 10px;cursor:pointer;transition:color .3s,border-color .3s}
+.lang-switch button:hover{color:var(--ink)}
+.lang-switch button[aria-pressed="true"]{color:var(--ink);border-color:var(--line2)}

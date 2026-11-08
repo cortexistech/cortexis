@@ -2,6 +2,9 @@
   "hosting": {
     "target": "cortexistech",
     "public": ".",
+    "i18n": {
+      "root": "/localized-files"
+    },
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -15,7 +18,8 @@
       "assets/cortexis-robot-body.png",
       "assets/cortexis-robot-helmet.png",
       "assets/cortexis-institucional-vertical.mp4",
-      "assets/cortexis-institucional-vertical-pt-pt.mp4"
+      "assets/cortexis-institucional-vertical-pt-pt.mp4",
+      "scripts/**"
     ],
     "redirects": [
       {
