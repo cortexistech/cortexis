@@ -24,7 +24,7 @@ body.cx.inner{
   background:radial-gradient(ellipse 60% 70% at 88% 25%,rgb(var(--cyan-rgb)/.12),transparent 70%),var(--bg);
   border-bottom:1px solid var(--line);
 }
-.inner .page-hero h1.section-title{font-size:clamp(3rem,7.4vw,7rem);font-weight:300;letter-spacing:-.045em;line-height:.98;max-width:15ch;margin:0 0 .35em}
+.inner .page-hero h1.section-title{font-size:clamp(3rem,5.8vw,5rem);font-weight:300;letter-spacing:-.045em;line-height:.98;max-width:15ch;margin:0 0 .35em}
 .inner .page-hero .section-sub{font-size:clamp(16px,1.3vw,19px);max-width:56ch;color:var(--muted);line-height:1.7}
 .inner .eyebrow{font-family:var(--mono);letter-spacing:.14em;color:var(--muted);margin-bottom:28px;gap:12px}
 .inner .eyebrow-dot{width:28px;background:var(--cyan)}
@@ -51,7 +51,7 @@ body.cx.inner{
 
 /* faixa de contato no fim das páginas: mesmo fechamento da home */
 .inner .contact-cta{background:var(--navy);color:#fff;padding:clamp(96px,12vw,170px) 0}
-.inner .contact-cta .section-title{color:#fff;font-size:clamp(2.4rem,6vw,5.4rem);max-width:16ch}
+.inner .contact-cta .section-title{color:#fff;font-size:clamp(2.4rem,4.8vw,4rem);max-width:16ch}
 .inner .contact-cta .section-sub{color:rgba(255,255,255,.72)}
 .inner .contact-cta-inner{align-items:flex-end;gap:40px}
 .inner .contact-cta .btn-primary{background:#fff;color:var(--navy);border-color:#fff}
