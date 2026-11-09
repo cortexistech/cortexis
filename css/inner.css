@@ -97,3 +97,36 @@ html[data-theme="dark"] .inner .ops-shot-hero{background:linear-gradient(180deg,
 html[data-theme="dark"] .inner .ops-frame img{background:var(--bg2);border-color:var(--line)}
 html[data-theme="dark"] .inner .home-product-modules li{border-color:var(--line2);color:var(--cyan)}
 html[data-theme="dark"] .inner .portfolio-card-feature .portfolio-thumb{box-shadow:0 40px 90px -45px rgba(79,211,226,.2)}
+
+/* faixa de segurança da página Produtos: texto legível e fundo correto no tema escuro */
+.inner .product-trust{background:var(--navy)}
+.inner .product-trust-grid p{color:rgba(255,255,255,.78)}
+html[data-theme="dark"] .inner .product-trust{background:var(--bg2);border-block:1px solid var(--line)}
+html[data-theme="dark"] .inner .product-trust-grid p{color:var(--muted)}
+
+/* faixa final: título mais largo e respiro até o subtítulo */
+.inner .contact-cta .section-title{max-width:20ch}
+.inner .contact-cta .section-sub{margin-top:20px}
+
+/* serviços sob medida no mesmo formato tipográfico do restante do site */
+.inner .service-guide-heading h2{font-size:clamp(28px,3.4vw,44px);font-weight:300;letter-spacing:-.035em;line-height:1.08}
+.inner .service-guide-heading > div > p{font-size:15px}
+.inner .service-choice h3{font-size:clamp(22px,2vw,28px);font-weight:300;letter-spacing:-.03em;line-height:1.1}
+.inner .service-choice > p{font-size:15px;line-height:1.55}
+.inner .service-feature-copy strong{font-size:clamp(22px,2vw,28px);font-weight:300;letter-spacing:-.03em}
+.inner .service-support-copy strong{font-size:clamp(19px,1.6vw,22px);font-weight:400;letter-spacing:-.02em}
+.inner .service-feature-copy > span:last-child,.inner .service-support-copy > span:last-child{font-size:15px;line-height:1.55}
+.inner .service-choice-link,.inner .service-feature-link{font-size:13px}
+
+/* marcas próprias dos produtos */
+.inner .product-mark-sm{width:40px;height:40px;margin-bottom:14px}
+.inner .ops-word{font-weight:500}
+.inner .product-mark-tile{background:#fff;border:1px solid var(--line);border-radius:10px;padding:4px}
+
+/* app secundário na página Produtos */
+.inner .product-secondary-head{margin-top:24px;padding-top:40px;border-top:1px solid var(--line);display:grid;gap:6px}
+.inner .product-secondary-head .home-section-label{margin:0}
+.inner .product-secondary-head p:last-child{margin:0;font-size:15px}
+.inner .product-panel-secondary{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:48px}
+.inner .product-panel-secondary h3{font-size:clamp(24px,2.2vw,30px)}
+@media (max-width:900px){.inner .product-panel-secondary{grid-template-columns:1fr}}

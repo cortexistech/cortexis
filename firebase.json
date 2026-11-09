@@ -10,6 +10,7 @@
       "**/.*",
       "**/node_modules/**",
       "README.md",
+      "PENDENCIAS.md",
       "instagram/**",
       "divulgacao/**",
       "tmp/**",

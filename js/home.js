@@ -225,7 +225,7 @@
       }
     });
 
-    gsap.fromTo(".cta", { "--cta": 0 }, { "--cta": 1, ease: "none", scrollTrigger: { trigger: ".cta", start: "top 75%", end: "top 25%", scrub: true } });
+    gsap.fromTo(".cta", { "--cta": 0 }, { "--cta": 1, duration: 0.9, ease: "power2.inOut", scrollTrigger: { trigger: ".cta", start: "top 65%", toggleActions: "play none none reverse" } });
 
     /* prévia dos projetos seguindo o cursor */
     if (fine && !reduced && $("#preview")) {

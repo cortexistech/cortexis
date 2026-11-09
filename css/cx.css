@@ -135,3 +135,18 @@ html[data-theme="dark"] .theme-btn .i-moon{display:none}
 /* "Pedir demonstração" do cabeçalho some enquanto o do topo da página está visível */
 .cx .hdr .hdr-cta{transition:color .45s var(--ease),border-color .45s,opacity .4s ease,transform .5s var(--ease),visibility .4s}
 .cx .hdr .hdr-cta.is-away{opacity:0;visibility:hidden;transform:translateY(-8px)}
+
+/* menu de produtos no cabeçalho */
+.hdr-nav{align-items:center}
+.nav-item{position:relative}
+.nav-menu{position:absolute;top:calc(100% + 18px);left:-18px;min-width:290px;padding:8px;display:grid;gap:2px;background:var(--bg);border:1px solid var(--line);border-radius:12px;box-shadow:0 24px 50px -24px rgba(18,36,51,.28);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s ease,transform .35s var(--ease),visibility .25s}
+.nav-menu::before{content:"";position:absolute;left:0;right:0;top:-20px;height:20px}
+.nav-item:hover .nav-menu,.nav-item:focus-within .nav-menu{opacity:1;visibility:visible;transform:none}
+.hdr-nav .nav-menu a{display:grid;gap:2px;padding:10px 12px;border-radius:8px;color:var(--ink)}
+.hdr-nav .nav-menu a::after{display:none}
+.hdr-nav .nav-menu a:hover,.hdr-nav .nav-menu a:focus-visible{background:var(--bg2)}
+.nav-menu b{font-weight:500;font-size:14px}
+.nav-menu span{font-size:12px;color:var(--muted)}
+.nav-menu .nav-menu-minor{margin-top:4px;padding-top:12px;border-top:1px solid var(--line);border-radius:0 0 8px 8px}
+.nav-menu .nav-menu-minor b{font-weight:400;color:var(--muted)}
+html[data-theme="dark"] .nav-menu{box-shadow:0 24px 50px -24px rgba(0,0,0,.6)}

@@ -35,7 +35,14 @@
 <header class="hdr" id="hdr">
   <a href="index.html" class="logo" aria-label="Cortexis Tech — início"><img class="logo-l" src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="126" height="34"><img class="logo-d" src="img/brand/logo-horizontal-dark.svg" alt="" aria-hidden="true" width="126" height="34"></a>
   <nav class="hdr-nav" aria-label="Principal">
-    <a href="produtos.html">Produtos</a>
+    <div class="nav-item">
+      <a href="produtos.html">Produtos</a>
+      <div class="nav-menu">
+        <a href="techclinica.html"><b>TechClínica</b><span>Para clínicas e consultórios</span></a>
+        <a href="cortexis-ops.html"><b>Cortexis Ops</b><span>Para empresas</span></a>
+        <a href="financas-facil.html" class="nav-menu-minor"><b>Finanças Fácil</b><span>App para uso pessoal</span></a>
+      </div>
+    </div>
     <a href="sob-medida.html">Sob medida</a>
     <a href="sobre.html">Sobre</a>
     <a href="contato.html">Contato</a>
@@ -61,7 +68,7 @@
     <div class="wrap">
       <p class="eyebrow"><span class="eyebrow-dot"></span>Produtos</p>
       <h1 class="section-title">Sistemas prontos para a <em>sua operação.</em></h1>
-      <p class="section-sub">Escolha o produto pela sua rotina e peça uma demonstração.</p>
+      <p class="section-sub">Dois sistemas de gestão da mesma família: o TechClínica, para clínicas e consultórios, e o Cortexis Ops, para empresas. Escolha pela sua rotina e peça uma demonstração.</p>
     </div>
   </section>
 
@@ -71,6 +78,7 @@
         <article class="product-panel">
           <a class="product-panel-image" href="techclinica.html" tabindex="-1" aria-hidden="true"><img src="img/clinica/painel.webp" width="1600" height="1000" alt="Painel do TechClínica com as consultas do dia, recebimentos e contas a receber" loading="lazy"></a>
           <div class="product-panel-copy">
+            <img class="product-mark product-mark-sm" src="img/clinica/techclinica-icon.svg" alt="" width="40" height="40">
             <p class="home-section-label">Para clínicas e consultórios</p>
             <h3>TechClínica</h3>
             <p>O consultório inteiro num só acesso. Da consulta marcada ao recibo, com prontuário criptografado e o paciente confirmando pelo e-mail.</p>
@@ -81,7 +89,7 @@
             <li>Estoque</li>
             </ul>
             <div class="product-panel-actions">
-              <a href="techclinica.html" class="executive-button">Conhecer o TechClínica <span aria-hidden="true">↗</span></a>
+              <a href="techclinica.html" class="btn btn-solid" data-liquid><span class="fill"></span><span class="lbl">Conhecer o TechClínica</span><span class="ico" aria-hidden="true">↗</span></a>
               <a href="contato.html?assunto=techclinica" class="executive-text-link">Pedir demonstração <span aria-hidden="true">→</span></a>
             </div>
           </div>
@@ -89,9 +97,10 @@
         <article class="product-panel product-panel-reverse">
           <a class="product-panel-image" href="cortexis-ops.html" tabindex="-1" aria-hidden="true"><img src="img/ops/indicadores.webp" width="1600" height="1000" alt="Indicadores do Cortexis Ops com saldo, contas a receber e a pagar e gráfico de receitas e despesas" loading="lazy"></a>
           <div class="product-panel-copy">
+            <img class="product-mark product-mark-sm" src="img/ops/cortexis-ops-icone.svg" alt="" width="40" height="40">
             <p class="home-section-label">Para empresas</p>
-            <h3>Cortexis Ops</h3>
-            <p>A operação da empresa num só sistema: documentos, arquivo, frota, vendas, compras, estoque, financeiro e indicadores ligados entre si.</p>
+            <h3>Cortexis <strong class="ops-word">Ops</strong></h3>
+            <p>A operação da empresa num só sistema. Cada área é um módulo Tech, e todos formam o Cortexis Ops: documentos e prazos, arquivo, manutenção da frota, estoque e financeiro, com os indicadores ligados entre si.</p>
             <ul class="home-product-modules" aria-label="Áreas do Cortexis Ops">
             <li>TechDocs</li>
             <li>TechArquivo</li>
@@ -101,19 +110,35 @@
             <li>Indicadores</li>
             </ul>
             <div class="product-panel-actions">
-              <a href="cortexis-ops.html" class="executive-button">Conhecer o Cortexis Ops <span aria-hidden="true">↗</span></a>
+              <a href="cortexis-ops.html" class="btn btn-solid" data-liquid><span class="fill"></span><span class="lbl">Conhecer o Cortexis Ops</span><span class="ico" aria-hidden="true">↗</span></a>
               <a href="contato.html?assunto=cortexis-ops" class="executive-text-link">Pedir demonstração <span aria-hidden="true">→</span></a>
             </div>
           </div>
         </article>
-        <a class="product-compact" href="financas-facil.html">
-          <div>
+        <div class="product-secondary-head">
+          <p class="home-section-label">Além da gestão · Também para pessoas</p>
+          <p>A mesma engenharia dos nossos sistemas em um app para quem cuida do próprio dinheiro.</p>
+        </div>
+        <article class="product-panel product-panel-secondary">
+          <a class="product-panel-image" href="financas-facil.html" tabindex="-1" aria-hidden="true"><img src="img/financas/destaque.webp" width="1024" height="500" alt="Finanças Fácil: seu dinheiro com clareza executiva. 100% offline, criptografado e sem anúncios" loading="lazy"></a>
+          <div class="product-panel-copy">
+            <img class="product-mark product-mark-sm product-mark-tile" src="img/financas/icone.webp" alt="" width="40" height="40">
             <p class="home-section-label">Para uso pessoal · App Android · Em breve no Google Play</p>
             <h3>Finanças Fácil</h3>
+            <p>Controle financeiro pessoal 100% offline e criptografado, com previsão de caixa e orçamentos. Tudo fica no celular, sem cadastro e sem anúncios.</p>
+            <ul class="home-product-modules" aria-label="Recursos do Finanças Fácil">
+            <li>Previsão de caixa</li>
+            <li>Cartões</li>
+            <li>Orçamentos</li>
+            <li>Metas</li>
+            <li>Relatórios</li>
+            </ul>
+            <div class="product-panel-actions">
+              <a href="financas-facil.html" class="btn btn-solid" data-liquid><span class="fill"></span><span class="lbl">Conhecer o Finanças Fácil</span><span class="ico" aria-hidden="true">↗</span></a>
+              <a href="testar-financas-facil.html" class="executive-text-link">Quero testar antes <span aria-hidden="true">→</span></a>
+            </div>
           </div>
-          <p>Controle financeiro pessoal 100% offline e criptografado, com previsão de caixa e orçamentos.</p>
-          <span class="home-arrow-link">Conhecer o app <span aria-hidden="true">→</span></span>
-        </a>
+        </article>
       </div>
     </div>
   </section>
@@ -138,7 +163,7 @@
         <h2>Nenhum destes é o que você procura?</h2>
         <p>Construímos sob medida, com a mesma engenharia dos nossos produtos.</p>
       </div>
-      <a href="sob-medida.html" class="executive-button">Conhecer o sob medida <span aria-hidden="true">↗</span></a>
+      <a href="sob-medida.html" class="btn btn-solid" data-liquid><span class="fill"></span><span class="lbl">Conhecer o sob medida</span><span class="ico" aria-hidden="true">↗</span></a>
     </div>
   </section>
 

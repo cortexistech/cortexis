@@ -168,7 +168,7 @@ section{position:relative}
 .t-item:hover .go{transform:rotate(45deg);background:var(--cyan);color:var(--on-accent);border-color:var(--cyan)}
 .t-item:hover h3{transform:translateX(10px)}
 .t-item:nth-child(5) .go{position:static;margin-left:auto}
-@media (max-width:860px){.t-item{grid-column:span 12!important}.t-item:nth-child(5){flex-direction:column;align-items:flex-start}.t-item:nth-child(5) .go{margin-left:0}}
+@media (max-width:860px){.t-item{grid-column:span 12!important}.t-item:nth-child(5){flex-direction:column;align-items:flex-start}.t-item:nth-child(5) .go{position:absolute;margin-left:0}.t-item:nth-child(5) h3{padding-right:56px}}
 
 /* ---------- projetos ---------- */
 .work{border-top:1px solid var(--line)}
@@ -268,3 +268,29 @@ html[data-theme="dark"] .case-frame,html[data-theme="dark"] .pd-shot,html[data-t
 html[data-theme="dark"] .case-frame{box-shadow:0 60px 120px -50px rgba(79,211,226,.18)}
 html[data-theme="dark"] .cta{--cta-a:#050608;--cta-b:#ecebe6;--cta-fa:#eef1f4;--cta-fb:#0a0d12}
 html[data-theme="dark"] dialog.pd::backdrop{background:rgba(0,0,0,.5)}
+
+/* abas dos produtos sem quebrar linha no celular */
+@media (max-width:560px){.tabs{gap:0 14px}.tab{letter-spacing:.06em}}
+
+/* ícone do Cortexis Ops na barra da tela do caso em destaque */
+.case-bar img{width:16px;height:16px;margin-left:12px;border-radius:4px}
+.case-bar img + .mono{margin-left:2px}
+
+/* app secundário: faixa discreta abaixo dos serviços sob medida */
+.also{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:24px;align-items:center;margin-top:24px;padding:22px 28px;border:1px solid var(--line);background:var(--bg);transition:border-color .3s}
+.also:hover{border-color:var(--line2)}
+.also img{width:56px;height:56px;border-radius:14px;background:#fff;border:1px solid var(--line);padding:4px}
+.also-copy{display:grid;gap:4px;min-width:0}
+.also-copy .mono{color:var(--faint);font-size:10px}
+.also-copy b{font-weight:500;font-size:18px;color:var(--ink)}
+.also-copy > span:last-child{color:var(--muted);font-size:14.5px;max-width:62ch}
+@media (max-width:700px){.also{grid-template-columns:auto minmax(0,1fr);padding:20px}.also .link{grid-column:1/-1}}
+
+/* Cortexis Ops com a identidade própria dentro do título do caso */
+.cx .h2 .ops-brand{display:inline-flex;align-items:center;gap:.22em;white-space:nowrap;font-family:var(--sans);font-style:normal;color:var(--ink)}
+.cx .h2 .ops-brand strong{font-weight:500}
+.cx .h2 .ops-brand-mark{display:block;flex:none;width:.74em;height:.74em;margin-right:.04em;border-radius:.17em}
+
+/* título do caso em duas linhas: cliente / produto */
+.cx .h2.case-title{max-width:none}
+.cx .h2.case-title .case-line{display:block}

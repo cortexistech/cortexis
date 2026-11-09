@@ -63,7 +63,14 @@
 <header class="hdr" id="hdr">
   <a href="index.html" class="logo" aria-label="Cortexis Tech — início"><img class="logo-l" src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="126" height="34"><img class="logo-d" src="img/brand/logo-horizontal-dark.svg" alt="" aria-hidden="true" width="126" height="34"></a>
   <nav class="hdr-nav" aria-label="Principal">
-    <a href="produtos.html">Produtos</a>
+    <div class="nav-item">
+      <a href="produtos.html">Produtos</a>
+      <div class="nav-menu">
+        <a href="techclinica.html"><b>TechClínica</b><span>Para clínicas e consultórios</span></a>
+        <a href="cortexis-ops.html"><b>Cortexis Ops</b><span>Para empresas</span></a>
+        <a href="financas-facil.html" class="nav-menu-minor"><b>Finanças Fácil</b><span>App para uso pessoal</span></a>
+      </div>
+    </div>
     <a href="sob-medida.html">Sob medida</a>
     <a href="sobre.html">Sobre</a>
     <a href="contato.html">Contato</a>
@@ -160,15 +167,6 @@
       <div class="dash" aria-hidden="true"></div>
     </article>
 
-    <a class="panel product-mini" href="financas-facil.html">
-      <div>
-        <div class="who mono"><b>Finanças Fácil</b><span>Em breve no Google Play</span></div>
-        <h3>Suas finanças, <em>offline.</em></h3>
-        <p>Controle financeiro pessoal 100% offline e criptografado, com previsão de caixa e orçamentos.</p>
-      </div>
-      <div class="shot"><img src="img/financas/destaque.webp" alt="Tela inicial do app Finanças Fácil" loading="lazy"></div>
-      <span class="link">Conhecer o app <span class="ico" aria-hidden="true">↘</span></span>
-    </a>
 
   </div>
   </div>
@@ -221,35 +219,40 @@
     <a class="t-item" href="agentes-ia.html" data-n="04"><span class="n">04</span><div><h3>Agentes de IA</h3><p>Automações que assumem tarefas repetitivas e apoiam a sua equipe.</p></div><span class="go" aria-hidden="true">↗</span></a>
     <a class="t-item" href="manutencao-suporte.html" data-n="05"><span class="n">05</span><div><h3>Manutenção &amp; suporte</h3><p>Atualizações, correções e melhorias contínuas no que já está no ar.</p></div><span class="go" aria-hidden="true">↗</span></a>
   </div>
+  <a class="also" href="financas-facil.html">
+    <img src="img/financas/icone.webp" width="56" height="56" alt="" loading="lazy">
+    <span class="also-copy"><span class="mono">Também para pessoas · App Android</span><b>Finanças Fácil</b><span>Controle financeiro pessoal 100% offline e criptografado. A mesma engenharia dos nossos sistemas, no bolso de quem cuida do próprio dinheiro.</span></span>
+    <span class="link">Conhecer o app <span class="ico" aria-hidden="true">↘</span></span>
+  </a>
 </section>
 
 <!-- ===== 05 CASO EM DESTAQUE ===== -->
-<section class="sec case" id="med-sim" aria-labelledby="case-title">
+<section class="sec case" id="caso" aria-labelledby="case-title">
   <div class="sec-head">
     <div>
-      <div class="label mono"><b>05</b><span>Caso em destaque · Projeto próprio</span></div>
-      <h2 class="h2" id="case-title" data-reveal>MED-SIM. <em>Um paciente virtual para treinar a anamnese.</em></h2>
+      <div class="label mono"><b>05</b><span>Caso em destaque · Cliente em produção</span></div>
+      <h2 class="h2 case-title" id="case-title" data-reveal><span class="case-line">Grupo Ednave.</span> <span class="case-line"><em>A operação no</em></span> <span class="case-line"><span class="ops-brand"><img class="ops-brand-mark" src="img/ops/cortexis-ops-icone.svg" alt="" width="64" height="64">Cortexis <strong>Ops</strong></span></span></h2>
     </div>
-    <a href="agentes-ia.html" class="link">Ver agentes de IA <span class="ico" aria-hidden="true">↘</span></a>
+    <a href="sob-medida.html#projetos" class="link">Ver todos os projetos <span class="ico" aria-hidden="true">↘</span></a>
   </div>
   <div class="case-grid">
     <figure class="case-shot">
       <div class="case-frame">
-        <div class="case-bar" aria-hidden="true"><i></i><i></i><i></i><span class="mono">MED-SIM · Simulação de anamnese</span></div>
-        <div class="case-img"><img src="img/portfolio/medsim.jpg" width="1280" height="800" alt="Simulação de anamnese em andamento no MED-SIM, com o paciente virtual respondendo perguntas" loading="lazy"></div>
+        <div class="case-bar" aria-hidden="true"><i></i><i></i><i></i><img src="img/ops/cortexis-ops-icone.svg" alt="" width="16" height="16"><span class="mono">techdocs.grupoednave.com.br</span></div>
+        <div class="case-img"><img src="img/ops/indicadores.webp" width="1600" height="1000" alt="Painel de Indicadores do Cortexis Ops, com dados de demonstração" loading="lazy"></div>
       </div>
-      <figcaption class="case-badge mono"><span class="dot" aria-hidden="true"></span>Google Gemini · Node.js</figcaption>
+      <figcaption class="case-badge mono"><span class="dot" aria-hidden="true"></span>Em produção</figcaption>
     </figure>
     <div class="case-copy">
-      <p class="case-lead">Simulador clínico educativo, usado por alunos, professores e administradores.</p>
+      <p class="case-lead">O Cortexis Ops rodando na operação do Grupo Ednave, empresa de transporte fluvial de petróleo e biocombustíveis na Amazônia.</p>
       <ol class="case-steps">
-        <li><span class="mono">01</span><div><b>Anamnese em português</b><p>O aluno pergunta e o paciente virtual responde, como numa consulta.</p></div></li>
-        <li><span class="mono">02</span><div><b>Exame físico e prontuário</b><p>Liberados só por comando explícito, como na prática clínica.</p></div></li>
-        <li><span class="mono">03</span><div><b>Relatório de desempenho</b><p>Ao final, um relatório estruturado do que foi feito na simulação.</p></div></li>
+        <li><span class="mono">01</span><div><b>No endereço do cliente</b><p>O sistema atende a empresa no próprio domínio, em techdocs.grupoednave.com.br.</p></div></li>
+        <li><span class="mono">02</span><div><b>Módulos ligados entre si</b><p>Documentos e prazos, arquivo, manutenção, financeiro e indicadores no mesmo acesso.</p></div></li>
+        <li><span class="mono">03</span><div><b>Indicadores para decidir</b><p>Os números da operação reunidos num painel para quem acompanha a empresa.</p></div></li>
       </ol>
       <div class="product-actions">
-        <a href="contato.html?assunto=agente-ia" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Quero um agente assim</span><span class="ico" aria-hidden="true">↗</span></a>
-        <a href="sob-medida.html#projetos" class="link">Ver todos os projetos <span class="ico" aria-hidden="true">↘</span></a>
+        <a href="contato.html?assunto=cortexis-ops" class="btn btn-solid" data-magnetic data-liquid><span class="fill"></span><span class="lbl">Quero o Cortexis Ops</span><span class="ico" aria-hidden="true">↗</span></a>
+        <a href="cortexis-ops.html" class="link">Conhecer o sistema <span class="ico" aria-hidden="true">↘</span></a>
       </div>
     </div>
   </div>
