@@ -61,6 +61,26 @@
         "source": "/produtos-mvps",
         "destination": "/mvps.html",
         "type": 301
+      },
+      {
+        "source": "/servicos.html",
+        "destination": "/sob-medida.html",
+        "type": 301
+      },
+      {
+        "source": "/servicos",
+        "destination": "/sob-medida.html",
+        "type": 301
+      },
+      {
+        "source": "/projetos.html",
+        "destination": "/sob-medida.html#projetos",
+        "type": 301
+      },
+      {
+        "source": "/projetos",
+        "destination": "/sob-medida.html#projetos",
+        "type": 301
       }
     ],
     "headers": [

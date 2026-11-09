@@ -3,7 +3,8 @@
 
   const HASH_PAGES = {
     video: "sobre.html",
-    servicos: "servicos.html",
+    servicos: "sob-medida.html",
+    projetos: "sob-medida.html#projetos",
     processo: "sobre.html#processo",
     sobre: "sobre.html",
     contato: "contato.html",

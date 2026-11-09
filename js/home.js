@@ -6,7 +6,7 @@
   "use strict";
 
   /* Âncoras antigas da home que viraram páginas próprias */
-  const HASH_PAGES = { video: "sobre.html", servicos: "servicos.html", processo: "sobre.html#processo", sobre: "sobre.html", contato: "contato.html" };
+  const HASH_PAGES = { video: "sobre.html", servicos: "sob-medida.html", projetos: "sob-medida.html#projetos", processo: "sobre.html#processo", sobre: "sobre.html", contato: "contato.html" };
   const dest = HASH_PAGES[location.hash.replace(/^#/, "")];
   if (dest) { location.replace(dest); return; }
 
@@ -212,7 +212,7 @@
         .from(".case-img", { scale: 1.25, duration: 1.8 }, 0)
         .from(".case-badge", { y: 30, opacity: 0, duration: 1 }, 0.5)
         .from(".case-copy > *, .case-steps li", { y: 30, opacity: 0, duration: 1, stagger: 0.06 }, 0.2);
-      gsap.from(".w-row", { y: 50, opacity: 0, duration: 1.1, stagger: 0.1, ease: "expo.out", scrollTrigger: { trigger: ".w-list", start: "top 88%" } });
+      if ($(".w-row")) gsap.from(".w-row", { y: 50, opacity: 0, duration: 1.1, stagger: 0.1, ease: "expo.out", scrollTrigger: { trigger: ".w-list", start: "top 88%" } });
 
       if (wide) {
         const sec = $("#produtos"), pinEl = $("#hPin"), track = $("#hTrack");
@@ -228,7 +228,7 @@
     gsap.fromTo(".cta", { "--cta": 0 }, { "--cta": 1, ease: "none", scrollTrigger: { trigger: ".cta", start: "top 75%", end: "top 25%", scrub: true } });
 
     /* prévia dos projetos seguindo o cursor */
-    if (fine && !reduced) {
+    if (fine && !reduced && $("#preview")) {
       const pv = $("#preview"), img = $("img", pv);
       const px = gsap.quickTo(pv, "x", { duration: 0.7, ease: "power3.out" }), py = gsap.quickTo(pv, "y", { duration: 0.7, ease: "power3.out" });
       gsap.set(pv, { xPercent: -50, yPercent: -50 });

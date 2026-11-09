@@ -70,7 +70,7 @@ body.cx.inner{
 .inner .portfolio-card-feature .portfolio-tag{align-self:end;color:var(--cyan)}
 .inner .portfolio-card-feature h3{font-size:clamp(28px,3.4vw,44px);font-weight:300;letter-spacing:-.04em}
 .inner .portfolio-card-feature p{font-size:16px}
-.inner .portfolio-grid:has(.portfolio-card-feature){justify-content:stretch;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
+.inner .portfolio-grid:has(.portfolio-card-feature){justify-content:stretch;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr))}
 @media (max-width:760px){.inner .portfolio-card-feature{grid-template-columns:1fr}.inner .portfolio-card-feature .portfolio-thumb,.inner .portfolio-card-feature > :not(.portfolio-thumb){grid-column:1;grid-row:auto}.inner .portfolio-card-feature .portfolio-thumb{margin-bottom:20px}}
 
 /* ---------- tema escuro: variáveis e fundos fixos herdados do style.css ---------- */
