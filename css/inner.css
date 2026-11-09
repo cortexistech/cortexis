@@ -130,3 +130,5 @@ html[data-theme="dark"] .inner .product-trust-grid p{color:var(--muted)}
 .inner .product-panel-secondary{grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:48px}
 .inner .product-panel-secondary h3{font-size:clamp(24px,2.2vw,30px)}
 @media (max-width:900px){.inner .product-panel-secondary{grid-template-columns:1fr}}
+.inner .product-mark[src*="cortexis-ops-icone"]{border-radius:15px;box-shadow:0 0 0 1px var(--line2)}
+.inner .product-mark-sm[src*="cortexis-ops-icone"]{border-radius:10px}

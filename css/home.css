@@ -294,3 +294,6 @@ html[data-theme="dark"] dialog.pd::backdrop{background:rgba(0,0,0,.5)}
 /* título do caso em duas linhas: cliente / produto */
 .cx .h2.case-title{max-width:none}
 .cx .h2.case-title .case-line{display:block}
+
+/* contorno fino no ícone do Cortexis Ops (destaca no tema escuro) */
+.cx .h2 .ops-brand-mark,.case-bar img{box-shadow:0 0 0 1px var(--line2)}
