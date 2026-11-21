@@ -3,13 +3,15 @@
    Pontos espalhados que se organizam numa grade 3D ("dados em ordem").
    Se o WebGL falhar, o canvas é removido e o hero segue só com tipografia.
    ========================================================= */
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
-
 const canvas = document.getElementById("gl");
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-if (canvas) {
+async function startHero() {
+  // This background is decorative. Skip the WebGL dependency entirely for
+  // visitors who ask for reduced motion, and load it after the page is idle.
+  if (!canvas || reduced) return;
   try {
+    const THREE = await import("https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js");
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, alpha: true, powerPreference: "high-performance" });
     const DPR = Math.min(devicePixelRatio, 2);
     renderer.setPixelRatio(DPR);
@@ -132,4 +134,9 @@ if (canvas) {
     console.warn("WebGL indisponível; hero segue sem o fundo 3D.", err);
     canvas.remove();
   }
+}
+
+if (canvas && !reduced) {
+  const schedule = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 500));
+  schedule(() => { void startHero(); }, { timeout: 1500 });
 }
