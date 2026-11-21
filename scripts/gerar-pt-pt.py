@@ -331,8 +331,10 @@ def translate_html(src):
         elif part.startswith("<"):
             out.append(ATTRS.sub(lambda m: m.group(1) + translate(m.group(2)) + m.group(3), part))
         else:
-            out.append(translate(part))
+            out.append(translate(part).replace("contato@cortexistech.com", "contacto@cortexistech.com"))
     html = "".join(out)
+    html = html.replace("5592991648073", "351911181236")
+    html = html.replace("+55 (92) 99164-8073", "911 181 236")
     html = html.replace('<html lang="pt-BR">', '<html lang="pt-PT">')
     return html
 

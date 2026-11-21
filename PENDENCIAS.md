@@ -28,9 +28,8 @@ Cada item abaixo precisa de uma informação ou decisão sua antes de ir para o 
 
 ## Contato e atendimento
 
-- [ ] **Telefone/WhatsApp do Brasil.** Hoje o único número é +351 (Portugal) em um site em
-  português do Brasil. Se não houver número brasileiro, decidir como explicar onde a empresa
-  atende.
+- [x] **Telefone/WhatsApp do Brasil.** A versão brasileira usa +55 (92) 99164-8073; a versão
+  pt-PT mantém o número +351.
 - [ ] **Prazo de resposta** que você consegue cumprir (por exemplo, "em até 1 dia útil"). A
   página de contato hoje diz "o mais rápido possível".
 

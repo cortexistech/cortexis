@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f4f8f8"/>
+    </linearGradient>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dff1f1" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#dff1f1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#background)"/>
+  <ellipse cx="960" cy="500" rx="720" ry="540" fill="url(#wash)" opacity=".34"/>
+
+  <g fill="none" stroke="#247f90" stroke-opacity=".09">
+    <path d="M0 0h370v1080H0zM1550 0h370v1080h-370z" stroke-opacity=".035"/>
+    <path d="M48 0v1080M1872 0v1080" stroke-opacity=".12"/>
+    <circle cx="185" cy="810" r="118"/>
+    <circle cx="185" cy="810" r="86"/>
+    <circle cx="1735" cy="300" r="116"/>
+    <circle cx="1735" cy="300" r="82"/>
+  </g>
+  <g fill="#247f90" fill-opacity=".12">
+    <circle cx="185" cy="810" r="4"/>
+    <circle cx="1735" cy="300" r="4"/>
+  </g>
+
+  <image href="../img/brand/logo-horizontal-light.svg" x="76" y="58" width="390" height="105" preserveAspectRatio="xMinYMid meet"/>
+
+  <g font-family="Inter, Arial, Helvetica, sans-serif">
+    <text x="78" y="362" fill="#52636e" font-size="15" font-weight="500" letter-spacing=".15">Sistemas de gestão · Software sob medida</text>
+    <path d="M78 388h342" stroke="#247f90" stroke-opacity=".4"/>
+    <text x="78" y="466" fill="#122433" font-size="52" font-weight="300" letter-spacing="-1.8">Sua operação</text>
+    <text x="78" y="525" fill="#122433" font-size="52" font-weight="300" letter-spacing="-1.8">em ordem</text>
+    <text x="78" y="584" fill="#247f90" font-size="52" font-weight="300" font-style="italic" letter-spacing="-1.8">estrita.</text>
+    <text x="78" y="624" fill="#52636e" font-size="18" font-weight="400">Para operações que não aceitam</text>
+    <text x="78" y="653" fill="#52636e" font-size="18" font-weight="400">improviso. Do primeiro atendimento</text>
+    <text x="78" y="682" fill="#52636e" font-size="18" font-weight="400">ao fechamento do mês, num só acesso.</text>
+    <path d="M78 960h342" stroke="#122433" stroke-opacity=".16"/>
+    <text x="78" y="1001" fill="#334b59" font-size="19" font-weight="600">cortexistech.com</text>
+
+    <text x="1604" y="336" fill="#52636e" font-size="15" font-weight="500" letter-spacing=".2">O que fazemos</text>
+    <path d="M1604 362h236" stroke="#247f90" stroke-opacity=".4"/>
+
+    <text x="1604" y="422" fill="#247f90" font-size="15" font-weight="500">01</text>
+    <text x="1642" y="422" fill="#122433" font-size="25" font-weight="500">TechClínica</text>
+    <text x="1642" y="450" fill="#52636e" font-size="16">Para clínicas e consultórios</text>
+    <path d="M1604 477h236" stroke="#122433" stroke-opacity=".12"/>
+
+    <text x="1604" y="531" fill="#247f90" font-size="15" font-weight="500">02</text>
+    <text x="1642" y="531" fill="#122433" font-size="25" font-weight="500">Cortexis Ops</text>
+    <text x="1642" y="559" fill="#52636e" font-size="16">Para empresas</text>
+    <path d="M1604 586h236" stroke="#122433" stroke-opacity=".12"/>
+
+    <text x="1604" y="640" fill="#247f90" font-size="15" font-weight="500">03</text>
+    <text x="1642" y="640" fill="#122433" font-size="25" font-weight="500">Sob medida</text>
+    <text x="1642" y="668" fill="#52636e" font-size="16">Sites, aplicativos, MVPs</text>
+    <text x="1642" y="691" fill="#52636e" font-size="16">e IA</text>
+    <path d="M1604 716h236" stroke="#122433" stroke-opacity=".12"/>
+    <path d="M1604 960h236" stroke="#122433" stroke-opacity=".16"/>
+    <text x="1604" y="1001" fill="#334b59" font-size="19" font-weight="600">@cortexis.tech</text>
+  </g>
+</svg>
