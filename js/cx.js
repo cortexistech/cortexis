@@ -130,7 +130,26 @@
     walk(el);
   };
 
-  if (!hasGsap) return;
+  if (!hasGsap) {
+    const hdr = $("#hdr"), mnav = $("#mnav");
+    if (hdr) {
+      let lastY = scrollY, ticking = false;
+      const updateHeader = () => {
+        const y = scrollY;
+        hdr.classList.toggle("is-solid", y > 40);
+        hdr.classList.toggle("is-hidden", y > lastY && y > 400 && !$("dialog[open]") && !(mnav && !mnav.hidden));
+        lastY = y;
+        ticking = false;
+      };
+      addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(updateHeader);
+      }, { passive: true });
+      updateHeader();
+    }
+    return;
+  }
   gsap.registerPlugin(ScrollTrigger);
 
   /* ----- rolagem -----
@@ -204,6 +223,6 @@
     }
   }
 
-  addEventListener("load", () => ScrollTrigger.refresh());
-  document.fonts && document.fonts.ready.then(() => ScrollTrigger.refresh());
+  addEventListener("load", () => { if (window.ScrollTrigger) ScrollTrigger.refresh(); });
+  document.fonts && document.fonts.ready.then(() => { if (window.ScrollTrigger) ScrollTrigger.refresh(); });
 })();

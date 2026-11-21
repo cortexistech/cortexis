@@ -192,8 +192,7 @@
     const intro = gsap.timeline({ defaults: { ease: "expo.out" } });
     if (reduced) intro.progress(1);
     else intro
-      .from(".hero h1 .li", { yPercent: 115, skewY: 6, duration: 1.6, stagger: 0.12 }, 0.1)
-      .from(".hero-in", { y: 24, opacity: 0, duration: 1.2, stagger: 0.07 }, 0.45);
+      .from(".hero h1 .li", { yPercent: 115, skewY: 6, duration: 1.6, stagger: 0.12 }, 0.1);
 
     const mm = gsap.matchMedia();
     mm.add({ motion: "(prefers-reduced-motion: no-preference)", wide: "(min-width: 900px)" }, (ctx) => {
@@ -201,10 +200,6 @@
       if (!motion) return;
 
       gsap.to(".hero h1", { yPercent: -25, opacity: 0.2, ease: "none", scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true } });
-
-      const man = $("#manifesto");
-      if (!man._split) { window.CX.splitWords(man, "mw"); man._split = true; }
-      gsap.fromTo($$(".mw", man), { opacity: 0.12 }, { opacity: 1, stagger: 0.05, ease: "none", scrollTrigger: { trigger: man, start: "top 80%", end: "bottom 50%", scrub: true } });
 
       gsap.from(".t-item", { y: 70, opacity: 0, duration: 1.2, stagger: 0.08, ease: "expo.out", scrollTrigger: { trigger: ".t-grid", start: "top 85%" } });
       gsap.timeline({ scrollTrigger: { trigger: ".case-grid", start: "top 80%" }, defaults: { ease: "expo.out" } })

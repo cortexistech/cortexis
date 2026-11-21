@@ -136,7 +136,7 @@ async function startHero() {
   }
 }
 
-if (canvas && !reduced) {
+if (canvas && !reduced && matchMedia("(min-width: 761px)").matches) {
   const schedule = window.requestIdleCallback || ((callback) => window.setTimeout(callback, 500));
   schedule(() => { void startHero(); }, { timeout: 1500 });
 }
