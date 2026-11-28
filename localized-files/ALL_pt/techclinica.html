@@ -20,10 +20,11 @@
 <script>(function(){try{var t=localStorage.getItem("cx-theme");if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@500..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/cx.css">
   <link rel="stylesheet" href="css/inner.css">
+  <link rel="stylesheet" href="css/b.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,24 +42,16 @@
 }
 </script>
 </head>
-<body class="cx inner">
+<body class="cx inner p-tc">
 
 <a class="skip-link" href="#main">Saltar para o conteúdo</a>
 
 <div class="progress" id="progress" aria-hidden="true"></div>
-<div class="cursor" id="cursor" aria-hidden="true"></div>
 
 <header class="hdr" id="hdr">
-  <a href="/" class="logo" aria-label="Cortexis Tech — início"><img class="logo-l" src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="126" height="34"><img class="logo-d" src="img/brand/logo-horizontal-dark.svg" alt="" aria-hidden="true" width="126" height="34"></a>
+  <a href="/" class="logo" aria-label="Cortexis Tech — início"><img class="logo-l" src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="133" height="34"><img class="logo-d" src="img/brand/logo-horizontal-dark.svg" alt="" aria-hidden="true" width="133" height="34"></a>
   <nav class="hdr-nav" aria-label="Principal">
-    <div class="nav-item">
-      <a href="produtos.html">Produtos</a>
-      <div class="nav-menu">
-        <a href="techclinica.html"><b>TechClínica</b><span>Para clínicas e consultórios</span></a>
-        <a href="cortexis-ops.html"><b>Cortexis Ops</b><span>Para empresas</span></a>
-        <a href="financas-facil.html" class="nav-menu-minor"><b>Finanças Fácil</b><span>App para uso pessoal</span></a>
-      </div>
-    </div>
+    <a href="cortexis-ops.html">Cortexis Ops</a>
     <a href="sob-medida.html">À medida</a>
     <a href="sobre.html">Sobre</a>
     <a href="contato.html">Contacto</a>
@@ -71,10 +64,10 @@
 </header>
 
 <nav class="mnav" id="mnav" aria-label="Menu" hidden>
-  <a href="produtos.html"><span class="mono">01</span>Produtos</a>
-  <a href="sob-medida.html"><span class="mono">02</span>À medida</a>
-  <a href="sobre.html"><span class="mono">03</span>Sobre</a>
-  <a href="contato.html"><span class="mono">04</span>Contacto</a>
+  <a href="cortexis-ops.html">Cortexis Ops</a>
+  <a href="sob-medida.html">À medida</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="contato.html">Contacto</a>
   <a href="contato.html" class="btn btn-solid" data-liquid><span class="fill"></span><span class="lbl">Pedir demonstração</span><span class="ico" aria-hidden="true">↗</span></a>
 </nav>
 
@@ -82,8 +75,8 @@
 
   <section class="page-hero ops-hero">
     <div class="wrap">
-      <a href="produtos.html" class="back-link">← Voltar aos produtos</a>
-      <p class="eyebrow"><span class="eyebrow-dot"></span>Produto próprio · gestão clínica</p>
+      <a href="sob-medida.html" class="back-link">← Voltar ao à medida</a>
+      <p class="eyebrow"><span class="eyebrow-dot"></span>À medida · gestão clínica</p>
       <img class="product-mark" src="img/clinica/techclinica-icon.svg" alt="" width="64" height="64">
       <h1 class="section-title">TechClínica</h1>
       <p class="section-sub">O consultório inteiro num só acesso. Da consulta marcada ao recibo, a receção, os profissionais e o financeiro trabalham no mesmo sistema, cada um a ver só o que lhe cabe.</p>
@@ -293,19 +286,17 @@
 
 <footer class="ftr">
   <div class="ftr-brand">
-    <img class="logo-l" src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="141" height="38" loading="lazy"><img class="logo-d" src="img/brand/logo-horizontal-dark.svg" alt="" aria-hidden="true" width="141" height="38" loading="lazy">
+    <img class="logo-l" src="img/brand/logo-horizontal-light.svg" alt="Cortexis Tech" width="148" height="38" loading="lazy"><img class="logo-d" src="img/brand/logo-horizontal-dark.svg" alt="" aria-hidden="true" width="148" height="38" loading="lazy">
     <p class="ftr-tag">Tecnologia bem pensada.</p>
   </div>
-  <nav aria-label="Produtos"><span class="mono">Produtos</span><a href="techclinica.html">TechClínica</a><a href="cortexis-ops.html">Cortexis Ops</a><a href="financas-facil.html">Finanças Fácil</a></nav>
-  <nav aria-label="À medida"><span class="mono">À medida</span><a href="sites-landing-pages.html">Sites &amp; landing pages</a><a href="aplicativos-mobile.html">Aplicações</a><a href="mvps.html">MVPs</a><a href="agentes-ia.html">Agentes de IA</a><a href="manutencao-suporte.html">Manutenção &amp; suporte</a></nav>
+  <nav aria-label="Produtos"><span class="mono">Produtos</span><a href="cortexis-ops.html">Cortexis Ops</a><a href="financas-facil.html">Finanças Fácil</a></nav>
+  <nav aria-label="À medida"><span class="mono">À medida</span><a href="techclinica.html">TechClínica (clínicas)</a><a href="sites-landing-pages.html">Sites &amp; landing pages</a><a href="aplicativos-mobile.html">Aplicações</a><a href="mvps.html">MVPs</a><a href="agentes-ia.html">Agentes de IA</a><a href="manutencao-suporte.html">Manutenção &amp; suporte</a></nav>
   <nav aria-label="Empresa"><span class="mono">Empresa</span><a href="sob-medida.html#projetos">Projetos</a><a href="sobre.html">Sobre</a><a href="sobre.html#processo">Como trabalhamos</a></nav>
   <div><span class="mono">Contacto</span><a href="https://wa.me/351911181236" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contato@cortexistech.com">contacto@cortexistech.com</a><a href="https://www.instagram.com/cortexis.tech/" target="_blank" rel="noopener">@cortexis.tech</a><a href="contato.html">Fale connosco ↗</a></div>
   <div class="ftr-bottom"><span>© 2026 Cortexis Tech · <a href="privacidade.html">Política de privacidade</a></span><span class="lang-switch" role="group" aria-label="Versão do site"><span>Português:</span><button type="button" data-country="br">Brasil</button><button type="button" data-country="pt">Portugal</button></span><a href="#main">Voltar ao topo ↑</a></div>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="js/cx.js" defer></script>
+<script src="js/b.js" defer></script>
 <script src="js/script.js?v=paises&l=pt"></script>
 </body>
 </html>

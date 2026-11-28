@@ -1,0 +1,196 @@
+/* =========================================================
+   Cortexis Tech — direção B "Produto na frente"
+   Última camada de estilo de todas as páginas (depois de style.css,
+   cx.css e inner.css). Títulos firmes em Inter, sem itálico serifado,
+   botões retos, cartões claros sobre um fundo levemente acinzentado e
+   a cor de cada produto nas suas páginas.
+   ========================================================= */
+
+/* cores de cada produto (as versões escuras clareiam para manter contraste) */
+body.cx{
+  --tc:#c2335f; --tc-soft:rgba(216,51,107,.08);
+  --ops:var(--cyan); --ops-soft:rgb(var(--cyan-rgb)/.08);
+  --ff:#8c6420; --ff-soft:rgba(200,154,78,.12);
+  --surface:var(--bg); --page:var(--bg2);
+  --accent:var(--ink); --accent-soft:var(--bg2);
+}
+html[data-theme="dark"] body.cx{
+  --tc:#ef6f95; --tc-soft:rgba(239,111,149,.1);
+  --ops:var(--cyan); --ops-soft:rgb(var(--cyan-rgb)/.1);
+  --ff:#d9ad5f; --ff-soft:rgba(217,173,95,.12);
+  --surface:var(--bg2); --page:var(--bg);
+}
+body.cx.p-tc{--accent:var(--tc);--accent-soft:var(--tc-soft)}
+body.cx.p-ops{--accent:var(--ops);--accent-soft:var(--ops-soft)}
+body.cx.p-ff{--accent:var(--ff);--accent-soft:var(--ff-soft)}
+
+/* ---------- tipografia ---------- */
+.cx em,.cx .serif{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inherit}
+.cx h1 em,.cx h2 em,.cx .section-title em,.cx .h2 em,.inner h1 em,.inner h2 em,.inner .section-title em{color:inherit;font-weight:inherit}
+.inner .home-product-modules li{border-radius:8px;color:var(--ink);border-color:var(--line2)}
+.inner .mods-icons li{display:inline-flex;align-items:center;gap:6px;padding-left:4px}
+.inner .mods-icons img{width:20px;height:20px;flex:none}
+.cx .ftr-tag{font-family:var(--sans);font-style:normal;font-weight:600;font-size:17px;letter-spacing:-.015em}
+.inner h1,.inner h2,.inner h3{color:var(--ink);text-wrap:balance}
+.inner h2{font-weight:700;letter-spacing:-.03em;line-height:1.12}
+.inner h3{font-weight:600;letter-spacing:-.015em}
+.inner .service-guide-heading h2,.inner .portfolio-card-feature h3{font-weight:700;letter-spacing:-.03em}
+.inner .service-choice h3,.inner .service-feature-copy strong{font-weight:600;letter-spacing:-.02em}
+.inner .service-support-copy strong{font-weight:600}
+.inner .section-title{font-weight:700;font-size:clamp(1.75rem,3.2vw,2.6rem);letter-spacing:-.03em;line-height:1.1}
+.inner .page-hero h1.section-title{font-weight:700;font-size:clamp(2.4rem,5vw,3.9rem);letter-spacing:-.04em;line-height:1.02;max-width:18ch}
+.inner .eyebrow{font-size:11px;margin-bottom:16px}
+.inner .eyebrow-dot{display:none}
+.inner .ops-module-tag,.inner .portfolio-tag,.inner .ops-feature-label,.inner .ops-shot-label,.inner .home-section-label{color:var(--muted)}
+
+/* ---------- fundo e cabeçalho de página ---------- */
+body.cx.inner{background:var(--page)}
+.inner .page-hero{
+  padding:clamp(116px,13vw,160px) 0 clamp(48px,6vw,80px);
+  background:var(--page);
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.inner .page-hero::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--accent);opacity:.9}
+body.cx.inner:not(.p-tc):not(.p-ops):not(.p-ff) .page-hero::before{display:none}
+.inner .page-hero .section-sub{font-size:clamp(15px,1.3vw,18px);max-width:60ch}
+.inner .back-link{font-family:var(--sans);font-size:13.5px;letter-spacing:0;margin-bottom:24px}
+.inner .product-mark{width:56px;height:56px;margin-bottom:18px;border-radius:13px}
+.inner .product-mark[src*="cortexis-ops-icone"],.inner .product-mark-sm[src*="cortexis-ops-icone"]{box-shadow:none}
+.inner .product-mark-tile{background:none;border:0;padding:0}
+.inner .ops-word{font-weight:inherit}
+
+/* ---------- botões ---------- */
+.cx .btn{border-radius:10px;font-weight:600;transition:background .25s,border-color .25s,color .25s,transform .25s,filter .25s}
+.cx .btn .fill,.cx .btn .ico{display:none}
+.cx .btn:hover,.cx .btn:focus-visible{color:var(--ink);border-color:var(--ink)}
+.cx .btn-solid,.inner .btn-primary{background:var(--solid-bg);color:var(--solid-fg);border-color:var(--solid-bg)}
+.cx .btn-solid:hover,.cx .btn-solid:focus-visible,.inner .btn-primary:hover,.inner .btn-primary:focus-visible{background:var(--deep);border-color:var(--deep);color:#fff}
+html[data-theme="dark"] .cx .btn-solid:hover,html[data-theme="dark"] .inner .btn-primary:hover{background:#fff;border-color:#fff;color:#050608}
+
+html[data-theme="dark"] .p-tc .btn-primary,html[data-theme="dark"] .p-ops .btn-primary,html[data-theme="dark"] .p-ff .btn-primary{color:#050608}
+.p-tc .btn-primary:hover,.p-ops .btn-primary:hover,.p-ff .btn-primary:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.inner .btn{border-radius:10px;padding:.95em 1.4em}
+.inner .btn-ghost{border-radius:10px}
+.inner .card-link,.inner .portfolio-link,.inner .service-choice-link,.inner .service-feature-link{color:var(--ink);font-weight:500;text-decoration:underline;text-decoration-color:var(--line2);text-underline-offset:4px}
+.inner .card-link:hover,.inner .portfolio-link:hover{text-decoration-color:currentColor}
+
+/* ---------- cartões ---------- */
+.inner .card,.inner .ops-module,.inner .portfolio-card:not(.portfolio-card-feature),.inner .service-choice,
+.inner .service-guide-feature,.inner .service-guide-support,.inner .contact-form,.inner .product-panel{
+  background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:none
+}
+.inner .card:hover,.inner .service-choice:hover{border-color:var(--line2);transform:none}
+.inner .ops-frame img,.inner .portfolio-thumb,.inner .product-panel-image{border-radius:10px}
+
+/* ---------- faixa de contato no fim das páginas ---------- */
+.inner .contact-cta{background:var(--surface);color:var(--ink);border-top:1px solid var(--line);padding:clamp(64px,8vw,104px) 0}
+.inner .contact-cta .section-title{color:var(--ink);font-size:clamp(1.75rem,3.2vw,2.6rem)}
+.inner .contact-cta .section-sub{color:var(--muted)}
+.inner .contact-cta .btn-primary{background:var(--solid-bg);color:var(--solid-fg);border-color:var(--solid-bg)}
+html[data-theme="dark"] .inner .contact-cta{background:var(--bg2)}
+
+/* ---------- faixa de segurança (Produtos) ---------- */
+.inner .product-trust{background:var(--surface);border-block:1px solid var(--line)}
+.inner .product-trust h2,.inner .product-trust h3{color:var(--ink)}
+.inner .product-trust-grid p{color:var(--muted)}
+
+/* ---------- módulos do Cortexis Ops com ícone ---------- */
+.inner .ops-module-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.inner .ops-module-icon{display:block;width:44px;height:44px;margin-bottom:14px}
+
+/* botões na cor do produto: no topo e na faixa final das páginas de produto */
+body.cx.p-tc .btn-primary,body.cx.p-ops .btn-primary,body.cx.p-ff .btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+html[data-theme="dark"] body.cx.p-tc .btn-primary,html[data-theme="dark"] body.cx.p-ops .btn-primary,html[data-theme="dark"] body.cx.p-ff .btn-primary{color:#050608}
+
+/* sem animação de entrada: o conteúdo aparece pronto */
+.cx .reveal{opacity:1;transform:none}
+.cx .progress{display:none}
+
+/* cartões de serviço da página Sob medida: margem interna igual nos três */
+.inner .service-choice{padding:24px 24px 22px}
+
+/* =========================================================
+   Menos cara de modelo pronto: títulos com personalidade,
+   rótulos em texto normal e movimento suave
+   ========================================================= */
+body.cx{
+  --display:"Bricolage Grotesque","Inter",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --hand:"Caveat","Bradley Hand","Segoe Print",cursive;
+}
+.inner h1,.inner h2,.inner .section-title,.inner .product-panel h3,.inner .portfolio-card h3,.inner .service-choice h3{font-family:var(--display)}
+.inner .page-hero h1.section-title{letter-spacing:-.035em;line-height:1}
+.inner .section-title,.inner h2{letter-spacing:-.025em}
+
+/* rótulos: frase normal no lugar de mono em maiúsculas */
+.inner .eyebrow,.inner .home-section-label,.inner .ops-module-tag,.inner .portfolio-tag,.inner .ops-feature-label,
+.inner .ops-shot-label,.inner .service-choice-type,.inner .service-guide-step,.cx .ftr .mono{
+  font-family:var(--sans);text-transform:none;letter-spacing:0;font-size:14px;font-weight:500
+}
+.cx .ftr .mono{font-weight:600;color:var(--ink);font-size:13.5px}
+.inner .ops-module-tag,.inner .portfolio-tag{font-size:13px}
+
+/* a faixa colorida no topo da página fica só como um traço curto */
+.inner .page-hero::before{display:none}
+.p-tc .page-hero .eyebrow,.p-ops .page-hero .eyebrow,.p-ff .page-hero .eyebrow{color:var(--accent);font-weight:600}
+
+/* entradas na rolagem (js/b.js liga a classe rv-on) */
+.rv-on [data-rv]{opacity:0;transform:translateY(22px);transition:opacity .8s ease var(--d,0s),transform 1s var(--ease) var(--d,0s)}
+.rv-on [data-rv].rv-in{opacity:1;transform:none}
+
+/* cartões internos reagem ao mouse */
+.inner .card,.inner .ops-module,.inner .portfolio-card:not(.portfolio-card-feature),.inner .service-choice{transition:border-color .3s,transform .45s var(--ease),box-shadow .45s}
+.inner .card:hover,.inner .ops-module:hover,.inner .portfolio-card:not(.portfolio-card-feature):hover,.inner .service-choice:hover{transform:translateY(-4px);box-shadow:0 24px 40px -30px rgba(18,36,51,.35)}
+.inner .ops-module-icon,.inner .product-mark{transition:transform .5s var(--ease)}
+.inner .ops-module:hover .ops-module-icon{transform:rotate(-8deg) scale(1.08)}
+.inner .page-hero:hover .product-mark{transform:rotate(-6deg)}
+.inner .ops-frame img,.inner .portfolio-thumb img{transition:transform .9s var(--ease)}
+.inner .ops-frame:hover img,.inner .portfolio-card:hover .portfolio-thumb img{transform:scale(1.02)}
+
+@media (prefers-reduced-motion:reduce){.rv-on [data-rv]{opacity:1;transform:none}}
+
+/* =========================================================
+   Faixas escuras de marca (abertura do Cortexis Ops, caso, chamada final)
+   Redefinem as cores para que todos os componentes funcionem sobre o escuro.
+   ========================================================= */
+.band-dark,body.p-ops .page-hero{
+  /* valores do tema escuro do design system, sobre o navy */
+  --ink:#eef1f4; --muted:#9aa3ab; --faint:#7d868e;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.18);
+  --surface:rgba(255,255,255,.04); --page:var(--navy); --bg2:rgba(255,255,255,.03);
+  --solid-bg:#eef1f4; --solid-fg:#122433; --deep:#4fd3e2;
+  --cyan:#4fd3e2; --cyan-rgb:79 211 226; --ops:#4fd3e2; --ops-soft:rgba(79,211,226,.08);
+  --tc:#ef6f95; --accent:#4fd3e2;
+  background:var(--navy); color:var(--ink); border-color:var(--line);
+}
+/* no tema escuro a faixa troca para bg2, como pede o design system */
+html[data-theme="dark"] .band-dark,html[data-theme="dark"] body.p-ops .page-hero{background:#0a0d12}
+.band-dark .btn-door,.band-dark .btn-door:hover,body.p-ops .page-hero .btn-primary{color:#050608}
+.cx .btn-light{background:#eef1f4;border-color:#eef1f4;color:#122433}
+.cx .btn-light:hover,.cx .btn-light:focus-visible{background:#4fd3e2;border-color:#4fd3e2;color:#050608;transform:translateY(-1px)}
+
+/* página do Cortexis Ops: abertura escura com textura de pontos e brilho ciano */
+body.p-ops .page-hero{position:relative;overflow:hidden;border-bottom:0}
+body.p-ops .page-hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(60% 80% at 85% 20%,rgba(79,211,226,.2),transparent 65%),radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.6px) 0 0/28px 28px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 95%);mask-image:linear-gradient(180deg,#000,transparent 95%)}
+body.p-ops .page-hero .wrap{position:relative;z-index:1}
+body.p-ops .page-hero .product-mark{box-shadow:none;border-radius:0}
+body.p-ops .page-hero .card-link{color:var(--ink)}
+
+/* cabeçalho por cima de uma abertura escura (até a página rolar) */
+body.hero-dark .hdr:not(.is-solid) .hdr-nav a{color:rgba(255,255,255,.78)}
+body.hero-dark .hdr:not(.is-solid) .hdr-nav a:hover,body.hero-dark .hdr:not(.is-solid) .hdr-nav a[aria-current="page"]{color:#fff}
+body.hero-dark .hdr:not(.is-solid) .logo-l{display:none}
+body.hero-dark .hdr:not(.is-solid) .logo-d{display:block}
+body.hero-dark .hdr:not(.is-solid) .theme-btn,body.hero-dark .hdr:not(.is-solid) .menu-btn{color:#eef1f4;border-color:rgba(255,255,255,.3)}
+body.hero-dark .hdr:not(.is-solid) .menu-btn span{background:#eef1f4}
+body.hero-dark .hdr:not(.is-solid) .hdr-cta{color:#eef1f4;border-color:rgba(255,255,255,.35)}
+body.p-ops .page-hero .ops-word{color:var(--cyan)}
+body.p-ops .ops-shot-hero{background:linear-gradient(180deg,var(--navy) 0,var(--navy) 46%,var(--page) 46%)!important}
+html[data-theme="dark"] body.p-ops .ops-shot-hero{background:linear-gradient(180deg,#0a0d12 0,#0a0d12 46%,var(--page) 46%)!important}
+body.p-ops .ops-shot-hero .ops-shot-label{color:#9aa3ab}
+body.p-ops .ops-shot-hero .ops-frame img{box-shadow:0 40px 80px -40px rgba(0,0,0,.6)}
+
+/* ícones de produto e módulo sem o quadrado: sem canto arredondado nem moldura */
+.inner .product-mark,.inner .product-mark-sm,.inner .ops-module-icon{border-radius:0;box-shadow:none;background:none}
