@@ -135,8 +135,8 @@
     techdocsVideo.setAttribute(
       "title",
       locale === "pt-PT"
-        ? "Filme do TechDocs (português de Portugal)"
-        : "Filme do TechDocs (português do Brasil)"
+        ? "Filme do módulo Documentos (português de Portugal)"
+        : "Filme do módulo Documentos (português do Brasil)"
     );
     techdocsVideo.load();
   }
